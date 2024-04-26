@@ -108,7 +108,8 @@ function TopBar({ showSpinner, setShowSpinner }: TopBarProps) {
             marginLeft: '24px'
           }}
         />
-        <TextButton label="Docs" onClick={() => platform.openExternal(getDocsEndpoint())} />
+        <TextButton label="Noodl docs" onClick={() => platform.openExternal(getDocsEndpoint())} />
+        <TextButton label="Roodl docs" onClick={() => platform.openExternal('https://docs.rolder.app')} />
         <TextButton label="Community" onClick={() => platform.openExternal('https://www.noodl.net/community')} />
       </HStack>
     </div>

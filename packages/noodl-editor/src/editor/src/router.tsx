@@ -82,14 +82,14 @@ export default class Router
     };
 
     console.log(`
-  _   _                    _  _
- | \\ | |                  | || |
- |  \\| |  ___    ___    __| || |
- | . \` | / _ \\  / _ \\  / _\` || |
- | |\\  || (_) || (_) || (_| || |
- |_| \\_| \\___/  \\___/  \\__,_||_|
+ ____                     _  _
+|  _ \\                   | || |
+| (_) |  ___    ___    __| || |
+| . _/  / _ \\  / _ \\  / _\` || |
+| |\\_\\ | (_) || (_) || (_| || |
+|_| \\_\\ \\___/  \\___/  \\__,_||_|
 
-      version: ${platform.getFullVersion() || platform.getVersion()}
+         version: ${platform.getFullVersion() || platform.getVersion()}
 
 `);
 

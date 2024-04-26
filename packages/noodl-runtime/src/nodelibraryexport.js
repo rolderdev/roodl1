@@ -1,5 +1,7 @@
 'use strict';
 
+const rolderNodeLibrary = require('../rolder/nodelibrary').default;
+
 function formatDynamicPorts(nodeMetadata) {
   const dynamicports = [];
 
@@ -396,6 +398,7 @@ function generateNodeLibrary(nodeRegister) {
   });
 
   const coreNodes = [
+    ...rolderNodeLibrary,
     {
       name: 'UI Elements',
       description: 'Buttons, inputs, containers, media',

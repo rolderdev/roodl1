@@ -3,6 +3,7 @@ import { useTriggerRerender } from '@noodl-hooks/useTriggerRerender';
 import classNames from 'classnames';
 import { ipcRenderer } from 'electron';
 import React, { useEffect, useRef, useState } from 'react';
+import { platform } from '@noodl/platform';
 
 import { FeedbackType } from '@noodl-constants/FeedbackType';
 import { Keybindings } from '@noodl-constants/Keybindings';
@@ -51,6 +52,8 @@ export interface EditorTopbarProps {
   onPreviewModeChanged: (previewMode: boolean) => void;
   nodeGraph: NodeGraphEditor;
   deployIsDisabled: boolean;
+  viewerEnabled: boolean
+  setViewerEnabled: (viewerEnabled: boolean) => void;
 }
 
 export function EditorTopbar({
@@ -69,7 +72,9 @@ export function EditorTopbar({
   previewMode,
   onPreviewModeChanged,
   nodeGraph,
-  deployIsDisabled
+  deployIsDisabled,
+  viewerEnabled,
+  setViewerEnabled
 }: EditorTopbarProps) {
   const urlBarRef = useRef<HTMLInputElement>(null);
   const deployButtonRef = useRef();
@@ -199,83 +204,101 @@ export function EditorTopbar({
             />
           </Tooltip>
         </div>
-
-        <div className={css['is-padded']}>
-          <Tooltip content="Navigate back">
-            <IconButton
-              variant={IconButtonVariant.Transparent}
-              icon={IconName.CaretLeft}
-              onClick={onUrlNavigateBack}
-              isDisabled={!navigationState.canGoBack}
-            />
-          </Tooltip>
-          <Tooltip content="Navigate forward">
-            <IconButton
-              variant={IconButtonVariant.Transparent}
-              icon={IconName.CaretRight}
-              onClick={onUrlNavigateForward}
-              isDisabled={!navigationState.canGoForward}
-            />
-          </Tooltip>
-          <Tooltip content="Refresh preview" fineType={Keybindings.REFRESH_PREVIEW.label}>
-            <IconButton
-              icon={IconName.Refresh}
-              variant={IconButtonVariant.Transparent}
-              onClick={() => EventDispatcher.instance.emit('viewer-refresh')}
-            />
-          </Tooltip>
-        </div>
-
-        <MenuDialog
-          title="Preview routes"
-          width={MenuDialogWidth.Large}
-          isVisible={isRouteListVisible}
-          onClose={() => setIsRouteListVisible(false)}
-          triggerRef={urlInputRef}
-          items={routes.map((url) => ({
-            label: url,
-            isHighlighted: routes.length > 1 && navigationState.route === url,
-            onClick: () => onRouteChanged(url)
-          }))}
-        />
-
-        <div ref={urlInputRef} className={css.UrlBarWrapper}>
-          <TextInput
-            onRefChange={(ref) => {
-              urlBarRef.current = ref.current;
-            }}
-            value={routeTextInputValue}
-            onFocus={() => setIsRouteListVisible(true)}
-            onChange={(e) => {
-              setRouteTextInputValue(e.target.value);
-              setIsRouteListVisible(false);
-            }}
-            onEnter={() => onRouteChanged(routeTextInputValue)}
-            UNSAFE_className={css.UrlBarTextInput}
-            variant={TextInputVariant.OpaqueOnHover}
-            slotBeforeInput={
-              <Icon
-                size={IconSize.Small}
-                variant={TextType.Default}
-                icon={navigationState.route === '/' ? IconName.Home : IconName.File}
-                UNSAFE_style={{ marginRight: 8 }}
-              />
-            }
-            slotAfterInput={
-              <Icon icon={IconName.CaretDown} variant={TextType.Default} UNSAFE_style={{ marginTop: -2 }} />
-            }
-          />
-        </div>
-
         <div className={css['is-padded-s']}>
-          <Tooltip content="Open dev tools" fineType={Keybindings.OPEN_DEVTOOLS.label}>
-            <IconButton
-              icon={IconName.Bug}
-              variant={IconButtonVariant.Transparent}
-              onClick={() => EventDispatcher.instance.emit('viewer-open-devtools')}
-            />
+          {/* Rolder */}
+          <Tooltip content="Toggle preview">
+            <ToggleSwitch isChecked={viewerEnabled} onChange={(e) => setViewerEnabled(e.target.checked)} />
           </Tooltip>
+          {!viewerEnabled ? (
+            <Tooltip content="Open app">
+              <IconButton
+                icon={IconName.ExternalLink}
+                variant={IconButtonVariant.Transparent}
+                onClick={() => platform.openExternal(`http://localhost:8574`)}
+              />
+            </Tooltip>
+          ) : null}
         </div>
+        {viewerEnabled ? (
+          <>
+            <div className={css['is-padded']}>
+              <Tooltip content="Navigate back">
+                <IconButton
+                  variant={IconButtonVariant.Transparent}
+                  icon={IconName.CaretLeft}
+                  onClick={onUrlNavigateBack}
+                  isDisabled={!navigationState.canGoBack}
+                />
+              </Tooltip>
+              <Tooltip content="Navigate forward">
+                <IconButton
+                  variant={IconButtonVariant.Transparent}
+                  icon={IconName.CaretRight}
+                  onClick={onUrlNavigateForward}
+                  isDisabled={!navigationState.canGoForward}
+                />
+              </Tooltip>
+              <Tooltip content="Refresh preview" fineType={Keybindings.REFRESH_PREVIEW.label}>
+                <IconButton
+                  icon={IconName.Refresh}
+                  variant={IconButtonVariant.Transparent}
+                  onClick={() => EventDispatcher.instance.emit('viewer-refresh')}
+                />
+              </Tooltip>
+            </div>
+
+            <MenuDialog
+              title="Preview routes"
+              width={MenuDialogWidth.Large}
+              isVisible={isRouteListVisible}
+              onClose={() => setIsRouteListVisible(false)}
+              triggerRef={urlInputRef}
+              items={routes.map((url) => ({
+                label: url,
+                isHighlighted: routes.length > 1 && navigationState.route === url,
+                onClick: () => onRouteChanged(url)
+              }))}
+            />
+
+            <div ref={urlInputRef} className={css.UrlBarWrapper}>
+              <TextInput
+                onRefChange={(ref) => {
+                  urlBarRef.current = ref.current;
+                }}
+                value={routeTextInputValue}
+                onFocus={() => setIsRouteListVisible(true)}
+                onChange={(e) => {
+                  setRouteTextInputValue(e.target.value);
+                  setIsRouteListVisible(false);
+                }}
+                onEnter={() => onRouteChanged(routeTextInputValue)}
+                UNSAFE_className={css.UrlBarTextInput}
+                variant={TextInputVariant.OpaqueOnHover}
+                slotBeforeInput={
+                  <Icon
+                    size={IconSize.Small}
+                    variant={TextType.Default}
+                    icon={navigationState.route === '/' ? IconName.Home : IconName.File}
+                    UNSAFE_style={{ marginRight: 8 }}
+                  />
+                }
+                slotAfterInput={
+                  <Icon icon={IconName.CaretDown} variant={TextType.Default} UNSAFE_style={{ marginTop: -2 }} />
+                }
+              />
+            </div>
+
+            <div className={css['is-padded-s']}>
+              <Tooltip content="Open dev tools" fineType={Keybindings.OPEN_DEVTOOLS.label}>
+                <IconButton
+                  icon={IconName.Bug}
+                  variant={IconButtonVariant.Transparent}
+                  onClick={() => EventDispatcher.instance.emit('viewer-open-devtools')}
+                />
+              </Tooltip>
+            </div>
+          </>
+        ) : null}
       </div>
 
       <div className={css['RightSide']}>
@@ -294,179 +317,183 @@ export function EditorTopbar({
           </div>
         )}
 
-        <div ref={screenSizeTrigger}>
-          <Tooltip content="Preview screen size" UNSAFE_triggerClassName={css.TooltipPositioner}>
-            <div
-              className={classNames(css['ZoomSelect'], css['TopbarSelect'])}
-              onClick={() => setIsSizeDialogVisible(true)}
-            >
-              <Icon icon={getIconFromScreenSizeGroupName(currentScreenSize.group)} />
-              <Icon icon={IconName.CaretDown} />
+        {viewerEnabled ? (
+          <>
+            <div ref={screenSizeTrigger}>
+              <Tooltip content="Preview screen size" UNSAFE_triggerClassName={css.TooltipPositioner}>
+                <div
+                  className={classNames(css['ZoomSelect'], css['TopbarSelect'])}
+                  onClick={() => setIsSizeDialogVisible(true)}
+                >
+                  <Icon icon={getIconFromScreenSizeGroupName(currentScreenSize.group)} />
+                  <Icon icon={IconName.CaretDown} />
+                </div>
+              </Tooltip>
+
+              <MenuDialog
+                title="Preview screen size"
+                width={MenuDialogWidth.Medium}
+                isVisible={isSizeDialogVisible}
+                triggerRef={screenSizeTrigger}
+                onClose={() => setIsSizeDialogVisible(false)}
+                items={screenSizesWithDividers.map((size) => {
+                  if (typeof size === 'string') return size;
+
+                  return {
+                    label: size.name + (size.width ? ` (${size.width} x ${size.height})` : ''),
+                    icon: getIconFromScreenSizeGroupName(size.group),
+                    isHighlighted: size.width === currentScreenSize.width && size.height === currentScreenSize.height,
+                    onClick: () => onPreviewSizeChanged(size.width, size.height, size.width ? size.name : null)
+                  };
+                })}
+              />
             </div>
-          </Tooltip>
 
-          <MenuDialog
-            title="Preview screen size"
-            width={MenuDialogWidth.Medium}
-            isVisible={isSizeDialogVisible}
-            triggerRef={screenSizeTrigger}
-            onClose={() => setIsSizeDialogVisible(false)}
-            items={screenSizesWithDividers.map((size) => {
-              if (typeof size === 'string') return size;
+            <div ref={zoomLevelTrigger}>
+              <Tooltip content="Preview zoom level" UNSAFE_triggerClassName={css.TooltipPositioner}>
+                <div
+                  className={classNames(css['ZoomSelect'], css['TopbarSelect'])}
+                  onClick={() => setIsZoomDialogVisible(true)}
+                >
+                  <Label>{zoomLevelOptions.find((option) => option.value === zoomFactor)?.label}</Label>
+                  <Icon icon={IconName.CaretDown} />
+                </div>
+              </Tooltip>
 
-              return {
-                label: size.name + (size.width ? ` (${size.width} x ${size.height})` : ''),
-                icon: getIconFromScreenSizeGroupName(size.group),
-                isHighlighted: size.width === currentScreenSize.width && size.height === currentScreenSize.height,
-                onClick: () => onPreviewSizeChanged(size.width, size.height, size.width ? size.name : null)
-              };
-            })}
-          />
-        </div>
-
-        <div ref={zoomLevelTrigger}>
-          <Tooltip content="Preview zoom level" UNSAFE_triggerClassName={css.TooltipPositioner}>
-            <div
-              className={classNames(css['ZoomSelect'], css['TopbarSelect'])}
-              onClick={() => setIsZoomDialogVisible(true)}
-            >
-              <Label>{zoomLevelOptions.find((option) => option.value === zoomFactor)?.label}</Label>
-              <Icon icon={IconName.CaretDown} />
+              <MenuDialog
+                title="Preview zoom level"
+                width={MenuDialogWidth.Small}
+                isVisible={isZoomDialogVisible}
+                onClose={() => setIsZoomDialogVisible(false)}
+                triggerRef={zoomLevelTrigger}
+                items={zoomLevelOptions.map((level) => ({
+                  label: level.label,
+                  isHighlighted: zoomFactor === level.value,
+                  onClick: () => setZoomFactor(level.value)
+                }))}
+              />
             </div>
-          </Tooltip>
 
-          <MenuDialog
-            title="Preview zoom level"
-            width={MenuDialogWidth.Small}
-            isVisible={isZoomDialogVisible}
-            onClose={() => setIsZoomDialogVisible(false)}
-            triggerRef={zoomLevelTrigger}
-            items={zoomLevelOptions.map((level) => ({
-              label: level.label,
-              isHighlighted: zoomFactor === level.value,
-              onClick: () => setZoomFactor(level.value)
-            }))}
-          />
-        </div>
+            {isSmall && (
+              <div ref={previewLayoutTrigger}>
+                <Tooltip content="Preview layout" UNSAFE_triggerClassName={css.TooltipPositioner}>
+                  <div
+                    className={classNames(css['ZoomSelect'], css['TopbarSelect'])}
+                    onClick={() => setIsPreviewLayoutDialogVisible(true)}
+                  >
+                    <Icon icon={getActiveLayoutIcon()} />
+                    <Icon icon={IconName.CaretDown} />
+                  </div>
+                </Tooltip>
 
-        {isSmall && (
-          <div ref={previewLayoutTrigger}>
-            <Tooltip content="Preview layout" UNSAFE_triggerClassName={css.TooltipPositioner}>
-              <div
-                className={classNames(css['ZoomSelect'], css['TopbarSelect'])}
-                onClick={() => setIsPreviewLayoutDialogVisible(true)}
-              >
-                <Icon icon={getActiveLayoutIcon()} />
-                <Icon icon={IconName.CaretDown} />
+                <MenuDialog
+                  title="Preview layout"
+                  width={MenuDialogWidth.Small}
+                  isVisible={isPreviewLayoutDialogVisible}
+                  onClose={() => setIsPreviewLayoutDialogVisible(false)}
+                  triggerRef={previewLayoutTrigger}
+                  items={[
+                    {
+                      label: 'Vertical',
+                      icon: IconName.VerticalSplit,
+                      isHighlighted: documentLayout === 'vertical',
+                      onClick: () => setDocumentLayout('vertical')
+                    },
+                    {
+                      label: 'Horizontal',
+                      icon: IconName.HorizontalSplit,
+                      isHighlighted: documentLayout === 'horizontal',
+                      onClick: () => setDocumentLayout('horizontal')
+                    },
+                    {
+                      label: 'Detached',
+                      icon: IconName.Cards,
+                      isHighlighted: documentLayout === 'detachedPreview',
+                      onClick: () => {
+                        setDocumentLayout('detachedPreview');
+                        ipcRenderer.send('viewer-focus');
+                      }
+                    }
+                  ]}
+                />
               </div>
-            </Tooltip>
+            )}
 
-            <MenuDialog
-              title="Preview layout"
-              width={MenuDialogWidth.Small}
-              isVisible={isPreviewLayoutDialogVisible}
-              onClose={() => setIsPreviewLayoutDialogVisible(false)}
-              triggerRef={previewLayoutTrigger}
-              items={[
-                {
-                  label: 'Vertical',
-                  icon: IconName.VerticalSplit,
-                  isHighlighted: documentLayout === 'vertical',
-                  onClick: () => setDocumentLayout('vertical')
-                },
-                {
-                  label: 'Horizontal',
-                  icon: IconName.HorizontalSplit,
-                  isHighlighted: documentLayout === 'horizontal',
-                  onClick: () => setDocumentLayout('horizontal')
-                },
-                {
-                  label: 'Detached',
-                  icon: IconName.Cards,
-                  isHighlighted: documentLayout === 'detachedPreview',
-                  onClick: () => {
-                    setDocumentLayout('detachedPreview');
-                    ipcRenderer.send('viewer-focus');
-                  }
-                }
-              ]}
-            />
-          </div>
-        )}
+            {!isSmall && (
+              <div className={css['is-padded']}>
+                <Tooltip content="Split workspace vertically">
+                  <IconButton
+                    icon={IconName.VerticalSplit}
+                    variant={IconButtonVariant.Transparent}
+                    onClick={() => setDocumentLayout('vertical')}
+                    state={documentLayout === 'vertical' ? IconButtonState.Active : undefined}
+                  />
+                </Tooltip>
 
-        {!isSmall && (
-          <div className={css['is-padded']}>
-            <Tooltip content="Split workspace vertically">
-              <IconButton
-                icon={IconName.VerticalSplit}
-                variant={IconButtonVariant.Transparent}
-                onClick={() => setDocumentLayout('vertical')}
-                state={documentLayout === 'vertical' ? IconButtonState.Active : undefined}
-              />
-            </Tooltip>
+                <Tooltip content="Split workspace horizontally">
+                  <IconButton
+                    icon={IconName.HorizontalSplit}
+                    variant={IconButtonVariant.Transparent}
+                    onClick={() => setDocumentLayout('horizontal')}
+                    state={documentLayout === 'horizontal' ? IconButtonState.Active : undefined}
+                  />
+                </Tooltip>
 
-            <Tooltip content="Split workspace horizontally">
-              <IconButton
-                icon={IconName.HorizontalSplit}
-                variant={IconButtonVariant.Transparent}
-                onClick={() => setDocumentLayout('horizontal')}
-                state={documentLayout === 'horizontal' ? IconButtonState.Active : undefined}
-              />
-            </Tooltip>
+                <Tooltip content="Detach preview from editor">
+                  <IconButton
+                    icon={IconName.Cards}
+                    variant={IconButtonVariant.Transparent}
+                    onClick={() => {
+                      setDocumentLayout('detachedPreview');
+                      ipcRenderer.send('viewer-focus');
+                    }}
+                    state={documentLayout === 'detachedPreview' ? IconButtonState.Active : undefined}
+                  />
+                </Tooltip>
+              </div>
+            )}
 
-            <Tooltip content="Detach preview from editor">
-              <IconButton
-                icon={IconName.Cards}
-                variant={IconButtonVariant.Transparent}
-                onClick={() => {
-                  setDocumentLayout('detachedPreview');
-                  ipcRenderer.send('viewer-focus');
-                }}
-                state={documentLayout === 'detachedPreview' ? IconButtonState.Active : undefined}
-              />
-            </Tooltip>
-          </div>
-        )}
-
-        <div className={css['is-padded-l']}>
-          <Tooltip
-            content="Design mode"
-            fineType={Keybindings.TOGGLE_PREVIEW_MODE.label}
-            UNSAFE_triggerClassName={css.TooltipPositioner}
-          >
-            <div className={css.DesignPreviewModeButton} onClick={() => onPreviewModeChanged(false)}>
-              {isSmall ? (
-                <Icon icon={IconName.Pencil} variant={!previewMode ? TextType.Secondary : undefined} />
-              ) : (
-                <Label variant={!previewMode ? TextType.Secondary : undefined}>Design</Label>
-              )}
+            <div className={css['is-padded-l']}>
+              <Tooltip
+                content="Design mode"
+                fineType={Keybindings.TOGGLE_PREVIEW_MODE.label}
+                UNSAFE_triggerClassName={css.TooltipPositioner}
+              >
+                <div className={css.DesignPreviewModeButton} onClick={() => onPreviewModeChanged(false)}>
+                  {isSmall ? (
+                    <Icon icon={IconName.Pencil} variant={!previewMode ? TextType.Secondary : undefined} />
+                  ) : (
+                    <Label variant={!previewMode ? TextType.Secondary : undefined}>Design</Label>
+                  )}
+                </div>
+              </Tooltip>
+              <Tooltip
+                content="Set editor mode"
+                fineType={Keybindings.TOGGLE_PREVIEW_MODE.label}
+                UNSAFE_triggerClassName={css.TooltipPositioner}
+              >
+                <ToggleSwitch
+                  isChecked={previewMode}
+                  onChange={(e) => { onPreviewModeChanged(e.target.checked) }}
+                  isAlwaysActiveColor
+                />
+              </Tooltip>
+              <Tooltip
+                content="Preview mode"
+                fineType={Keybindings.TOGGLE_PREVIEW_MODE.label}
+                UNSAFE_triggerClassName={css.TooltipPositioner}
+              >
+                <div className={css.DesignPreviewModeButton} onClick={() => onPreviewModeChanged(true)}>
+                  {isSmall ? (
+                    <Icon icon={IconName.PlayCircle} variant={previewMode ? TextType.Secondary : undefined} />
+                  ) : (
+                    <Label variant={previewMode ? TextType.Secondary : undefined}>Preview</Label>
+                  )}
+                </div>
+              </Tooltip>
             </div>
-          </Tooltip>
-          <Tooltip
-            content="Set editor mode"
-            fineType={Keybindings.TOGGLE_PREVIEW_MODE.label}
-            UNSAFE_triggerClassName={css.TooltipPositioner}
-          >
-            <ToggleSwitch
-              isChecked={previewMode}
-              onChange={(e) => onPreviewModeChanged(e.target.checked)}
-              isAlwaysActiveColor
-            />
-          </Tooltip>
-          <Tooltip
-            content="Preview mode"
-            fineType={Keybindings.TOGGLE_PREVIEW_MODE.label}
-            UNSAFE_triggerClassName={css.TooltipPositioner}
-          >
-            <div className={css.DesignPreviewModeButton} onClick={() => onPreviewModeChanged(true)}>
-              {isSmall ? (
-                <Icon icon={IconName.PlayCircle} variant={previewMode ? TextType.Secondary : undefined} />
-              ) : (
-                <Label variant={previewMode ? TextType.Secondary : undefined}>Preview</Label>
-              )}
-            </div>
-          </Tooltip>
-        </div>
+          </>
+        ) : null}
 
         <span ref={deployButtonRef}>
           <PrimaryButton
