@@ -1,5 +1,9 @@
 # Changelog
 
+## 2024-05-27 v1.0.0-beta1
+
+React 18!
+
 ## 2024-04-16 v1.0.0-beta0
 
 Первая версия Noodl от Rolder.
