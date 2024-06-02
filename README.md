@@ -1,21 +1,21 @@
-# Noodl
+# Fluxscape
 
-[Noodl](https://noodl.net) is a low-code platform where designers and developers build custom applications and experiences. Designed as a visual programming environment, it aims to expedite your development process. It promotes the swift and efficient creation of applications, requiring minimal coding knowledge.
+Fluxscape is a low-code platform where designers and developers build custom applications and experiences. Designed as a visual programming environment, it aims to expedite your development process. It promotes the swift and efficient creation of applications, requiring minimal coding knowledge.
 
 ## Documentation
-Documentation for how to use Noodl can be found here:
-[https://noodlapp.github.io/noodl-docs/](https://noodlapp.github.io/noodl-docs/)
+Documentation for how to use Fluxscape can be found here:
+[Fluxscape Documentation](https://docs.fluxscape.io)
 
 ## Community
-Main support channel is Discord: [https://www.noodl.net/community](https://www.noodl.net/community)
+Main support channel is Discord: [Fluxscape Discord](https://discord.gg/fXNW9EXa6A)
 
 ## Download releases
-Pre-built binaries can be [downloaded from Github](https://github.com/noodlapp/noodl/releases)
+Pre-built binaries can be [downloaded from Github](https://github.com/fluxscape/fluxscape/releases)
 
 ## Note for users who are migrating from the deprecated closed source version
-- [Migrating the project files and workspaces to a Git provider](https://noodlapp.github.io/noodl-docs/docs/guides/collaboration/migrating-from-noodl-hosted-git)
-- [Migrate backend and database](https://noodlapp.github.io/noodl-docs/docs/guides/deploy/using-an-external-backend#migrating-from-a-noodl-cloud-service)
-- [Self-host frontend](https://noodlapp.github.io/noodl-docs/docs/guides/deploy/hosting-frontend)
+- [Migrating the project files and workspaces to a Git provider](https://docs.fluxscape.io/docs/guides/collaboration/migrating-from-noodl-hosted-git/)
+- [Migrate backend and database](https://docs.fluxscape.io/docs/guides/deploy/using-an-external-backend/#migrating-from-a-noodl-cloud-service)
+- [Self-host frontend](https://docs.fluxscape.io/docs/guides/deploy/hosting-frontend/)
 
 ## Building from source
 
