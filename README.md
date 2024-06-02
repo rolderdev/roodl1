@@ -23,24 +23,24 @@ Pre-built binaries can be [downloaded from Github](https://github.com/fluxscape/
 # Install all dependencies
 $ npm install
 
-# Start the Noodl Editor and build a production version of the cloud and react runtime (useful when running Noodl from source but want to deploy to production)
+# Start the Fluxscape Editor and build a production version of the cloud and react runtime (useful when running Fluxscape from source but want to deploy to production)
 $ npm start
 
-# Start the Noodl Editor and watch the filesystem for changes to the runtimes. Development versions of the runtimes, not meant for production (mostly due to source maps and file size)
+# Start the Fluxscape Editor and watch the filesystem for changes to the runtimes. Development versions of the runtimes, not meant for production (mostly due to source maps and file size)
 # This is ideal for a quick workflow when doing changes on the runtimes.
 $ npm run dev
 
-# Start Noodl Editor test runner
+# Start Fluxscape Editor test runner
 $ npm run test:editor
 ```
 
 ## Licenses
-This repository contains two different licenses for different parts of the Noodl platform.
+This repository contains two different licenses for different parts of the Fluxscape platform.
 
-- Components related to the editor, used to edit Noodl projects, are under GPLv3
-- Components related to the end applications, used by the applications Noodl deploys, are under MIT
+- Components related to the editor, used to edit Fluxscape projects, are under GPLv3
+- Components related to the end applications, used by the applications Fluxscape deploys, are under MIT
 
-All of the source code of applications created with Noodl are under MIT. This means you can do project specific changes to the runtime without having to redistribute your changes.
+All of the source code of applications created with Fluxscape are under MIT. This means you can do project specific changes to the runtime without having to redistribute your changes.
 
 Packaged licensed under MIT:
 - `noodl-runtime`
