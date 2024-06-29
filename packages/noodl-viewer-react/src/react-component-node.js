@@ -660,7 +660,7 @@ function createNodeFromReactComponent(def) {
           ref: (ref) => {
             this.reactComponentRef = ref;
             // Rolder
-            if (!this.model.type.includes('rolder-kit.Pdf'))
+            if (!this.model?.type.includes('rolder-kit.Pdf'))
               this.boundingBoxObserver.setTarget(ReactDOM.findDOMNode(ref));
           }
         });
