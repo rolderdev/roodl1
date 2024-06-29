@@ -659,7 +659,9 @@ function createNodeFromReactComponent(def) {
           noodlNode: this,
           ref: (ref) => {
             this.reactComponentRef = ref;
-            this.boundingBoxObserver.setTarget(ReactDOM.findDOMNode(ref));
+            // Rolder
+            if (!this.model.type.includes('rolder-kit.Pdf'))
+              this.boundingBoxObserver.setTarget(ReactDOM.findDOMNode(ref));
           }
         });
       },
