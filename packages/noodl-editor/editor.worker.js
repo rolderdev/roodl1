@@ -1,6 +1,5 @@
 /******/ (() => { // webpackBootstrap
 /******/ 	"use strict";
-var __webpack_exports__ = {};
 
 // UNUSED EXPORTS: initialize
 
@@ -111,7 +110,7 @@ function illegalState(name) {
         return new Error('Illegal state');
     }
 }
-class NotSupportedError extends (/* unused pure expression or super */ null && (Error)) {
+class NotSupportedError extends Error {
     constructor(message) {
         super('NotSupported');
         if (message) {
@@ -145,7 +144,7 @@ class ErrorNoTelemetry extends Error {
  * Do not throw this for invalid user input.
  * Only catch this error to recover gracefully from bugs.
  */
-class BugIndicatingError extends (/* unused pure expression or super */ null && (Error)) {
+class BugIndicatingError extends Error {
     constructor(message) {
         super(message || 'An unexpected bug occurred.');
         Object.setPrototypeOf(this, BugIndicatingError.prototype);
@@ -651,7 +650,7 @@ class Node {
     }
 }
 Node.Undefined = new Node(undefined);
-class linkedList_LinkedList {
+class LinkedList {
     constructor() {
         this._first = Node.Undefined;
         this._last = Node.Undefined;
@@ -963,11 +962,11 @@ let _locale = undefined;
 let _language = (/* unused pure expression or super */ null && (LANGUAGE_DEFAULT));
 let _translationsConfigFile = (/* unused pure expression or super */ null && (undefined));
 let _userAgent = undefined;
-const platform_globals = (typeof self === 'object' ? self : typeof global === 'object' ? global : {});
+const globals = (typeof self === 'object' ? self : typeof global === 'object' ? global : {});
 let nodeProcess = undefined;
-if (typeof platform_globals.vscode !== 'undefined' && typeof platform_globals.vscode.process !== 'undefined') {
+if (typeof globals.vscode !== 'undefined' && typeof globals.vscode.process !== 'undefined') {
     // Native environment (sandboxed)
-    nodeProcess = platform_globals.vscode.process;
+    nodeProcess = globals.vscode.process;
 }
 else if (typeof process !== 'undefined') {
     // Native environment (non-sandboxed)
@@ -1036,7 +1035,7 @@ const isMacintosh = _isMacintosh;
 const isLinux = (/* unused pure expression or super */ null && (_isLinux));
 const isNative = (/* unused pure expression or super */ null && (_isNative));
 const platform_isWeb = (/* unused pure expression or super */ null && (_isWeb));
-const isWebWorker = (_isWeb && typeof platform_globals.importScripts === 'function');
+const isWebWorker = (_isWeb && typeof globals.importScripts === 'function');
 const isIOS = (/* unused pure expression or super */ null && (_isIOS));
 const userAgent = _userAgent;
 /**
@@ -1045,7 +1044,7 @@ const userAgent = _userAgent;
  * Chinese)
  */
 const language = (/* unused pure expression or super */ null && (_language));
-const setTimeout0IsFaster = (typeof platform_globals.postMessage === 'function' && !platform_globals.importScripts);
+const setTimeout0IsFaster = (typeof globals.postMessage === 'function' && !globals.importScripts);
 /**
  * See https://html.spec.whatwg.org/multipage/timers-and-user-prompts.html#:~:text=than%204%2C%20then-,set%20timeout%20to%204,-.
  *
@@ -1055,7 +1054,7 @@ const setTimeout0IsFaster = (typeof platform_globals.postMessage === 'function' 
 const setTimeout0 = (() => {
     if (setTimeout0IsFaster) {
         const pending = [];
-        platform_globals.addEventListener('message', (e) => {
+        globals.addEventListener('message', (e) => {
             if (e.data && e.data.vscodeScheduleAsyncWork) {
                 for (let i = 0, len = pending.length; i < len; i++) {
                     const candidate = pending[i];
@@ -1074,7 +1073,7 @@ const setTimeout0 = (() => {
                 id: myId,
                 callback: callback
             });
-            platform_globals.postMessage({ vscodeScheduleAsyncWork: myId }, '*');
+            globals.postMessage({ vscodeScheduleAsyncWork: myId }, '*');
         };
     }
     return (callback) => setTimeout(callback);
@@ -1105,7 +1104,7 @@ const isAndroid = !!(userAgent && userAgent.indexOf('Android') >= 0);
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-const hasPerformanceNow = (platform_globals.performance && typeof platform_globals.performance.now === 'function');
+const hasPerformanceNow = (globals.performance && typeof globals.performance.now === 'function');
 class StopWatch {
     constructor(highResolution) {
         this._highResolution = hasPerformanceNow && highResolution;
@@ -1125,7 +1124,7 @@ class StopWatch {
         return this._now() - this._startTime;
     }
     _now() {
-        return this._highResolution ? platform_globals.performance.now() : Date.now();
+        return this._highResolution ? globals.performance.now() : Date.now();
     }
 }
 
@@ -1648,7 +1647,7 @@ class Emitter {
             this._event = (callback, thisArgs, disposables) => {
                 var _a, _b, _c;
                 if (!this._listeners) {
-                    this._listeners = new linkedList_LinkedList();
+                    this._listeners = new LinkedList();
                 }
                 const firstListener = this._listeners.isEmpty();
                 if (firstListener && ((_a = this._options) === null || _a === void 0 ? void 0 : _a.onFirstListenerAdd)) {
@@ -1720,7 +1719,7 @@ class Emitter {
 }
 class EventDeliveryQueue {
     constructor() {
-        this._queue = new linkedList_LinkedList();
+        this._queue = new LinkedList();
     }
     get size() {
         return this._queue.size;
@@ -1729,7 +1728,7 @@ class EventDeliveryQueue {
         this._queue.push(new EventDeliveryQueueElement(emitter, listener, event));
     }
     clear(emitter) {
-        const newQueue = new linkedList_LinkedList();
+        const newQueue = new LinkedList();
         for (const element of this._queue) {
             if (element.emitter !== emitter) {
                 newQueue.push(element);
@@ -1766,7 +1765,7 @@ class EventDeliveryQueueElement {
         this.event = event;
     }
 }
-class PauseableEmitter extends (/* unused pure expression or super */ null && (Emitter)) {
+class PauseableEmitter extends Emitter {
     constructor(options) {
         super(options);
         this._isPaused = 0;
@@ -1805,7 +1804,7 @@ class PauseableEmitter extends (/* unused pure expression or super */ null && (E
         }
     }
 }
-class DebounceEmitter extends (/* unused pure expression or super */ null && (PauseableEmitter)) {
+class DebounceEmitter extends PauseableEmitter {
     constructor(options) {
         var _a;
         super(options);
@@ -3176,7 +3175,7 @@ class SimpleWorkerProtocol {
 /**
  * Main thread side
  */
-class SimpleWorkerClient extends (/* unused pure expression or super */ null && (Disposable)) {
+class SimpleWorkerClient extends lifecycle_Disposable {
     constructor(workerFactory, moduleId, host) {
         super();
         let lazyProxyReject = null;
@@ -3231,7 +3230,7 @@ class SimpleWorkerClient extends (/* unused pure expression or super */ null && 
             // Get the configuration from requirejs
             loaderConfiguration = globals.requirejs.s.contexts._.config;
         }
-        const hostMethods = types.getAllMethodNames(host);
+        const hostMethods = getAllMethodNames(host);
         // Send initialize message
         this._onModuleLoaded = this._protocol.sendMessage(INITIALIZE, [
             this._worker.getId(),
@@ -3387,7 +3386,7 @@ class SimpleWorkerServer {
             }
             // Since this is in a web worker, enable catching errors
             loaderConfig.catchError = true;
-            platform_globals.require.config(loaderConfig);
+            globals.require.config(loaderConfig);
         }
         return new Promise((resolve, reject) => {
             // Use the global require to be sure to get the global config
@@ -3395,7 +3394,7 @@ class SimpleWorkerServer {
             // 			const req = (globals.require || require);
             // ESM-comment-end
             // ESM-uncomment-begin
-            const req = platform_globals.require;
+            const req = globals.require;
             // ESM-uncomment-end
             req([moduleId], (module) => {
                 this._requestHandler = module.create(hostProxy);
@@ -4618,8 +4617,8 @@ class LcsDiff {
 
 let safeProcess;
 // Native sandbox environment
-if (typeof platform_globals.vscode !== 'undefined' && typeof platform_globals.vscode.process !== 'undefined') {
-    const sandboxProcess = platform_globals.vscode.process;
+if (typeof globals.vscode !== 'undefined' && typeof globals.vscode.process !== 'undefined') {
+    const sandboxProcess = globals.vscode.process;
     safeProcess = {
         get platform() { return sandboxProcess.platform; },
         get arch() { return sandboxProcess.arch; },
@@ -8425,7 +8424,7 @@ function ensureValidWordDefinition(wordDefinition) {
     result.lastIndex = 0;
     return result;
 }
-const _defaultConfig = new linkedList_LinkedList();
+const _defaultConfig = new LinkedList();
 _defaultConfig.unshift({
     maxLen: 1000,
     windowSize: 15,
@@ -12929,7 +12928,7 @@ function editorSimpleWorker_create(host) {
 }
 if (typeof importScripts === 'function') {
     // Running in a web worker
-    platform_globals.monaco = createMonacoBaseAPI();
+    globals.monaco = createMonacoBaseAPI();
 }
 
 ;// CONCATENATED MODULE: ../../node_modules/monaco-editor/esm/vs/editor/editor.worker.js
