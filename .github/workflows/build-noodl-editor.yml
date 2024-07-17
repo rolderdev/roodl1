@@ -18,13 +18,13 @@ jobs:
       fail-fast: false
       matrix:
         include:
-          - node: 16
+          - node: 18
             os: windows-latest
             platform: win32-x64
-          - node: 16
+          - node: 18
             os: macos-latest
             platform: darwin-arm64
-          - node: 16
+          - node: 18
             os: macos-latest
             platform: darwin-x64
           # - node: 16
