@@ -658,7 +658,7 @@ function createNodeFromReactComponent(def) {
           key: this.reactKey,
           noodlNode: this,
           ref: (ref) => {
-            this.reactComponentRef = ref;
+            this.reactComponentRef = ref;            
             // Rolder
             if (!this.model?.type.includes('rolder-kit.Pdf'))
               this.boundingBoxObserver.setTarget(ReactDOM.findDOMNode(ref));

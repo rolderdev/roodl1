@@ -438,8 +438,8 @@ function EditorDocument() {
         previewMode={previewMode}
         nodeGraph={nodeGraph}
         deployIsDisabled={ProjectModel.instance.isLesson()}
-        viewerEnabled={viewerEnabled}
-        setViewerEnabled={setViewerEnabled}
+        viewerEnabled={viewerEnabled} // Rolder
+        setViewerEnabled={setViewerEnabled} // Rolder
       />
       {hasLoadedEditorSettings && (
         <ViewComponent
