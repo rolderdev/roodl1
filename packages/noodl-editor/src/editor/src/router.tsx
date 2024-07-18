@@ -80,7 +80,8 @@ export default class Router
       route: ProjectsPage,
       routeArgs: { route: new AppRoute(this) }
     };
-
+    
+    // Rolder
     console.log(`
  ____                     _  _
 |  _ \\                   | || |
@@ -88,7 +89,6 @@ export default class Router
 | . _/  / _ \\  / _ \\  / _\` || |
 | |\\_\\ | (_) || (_) || (_| || |
 |_| \\_\\ \\___/  \\___/  \\__,_||_|
-
          version: ${platform.getFullVersion() || platform.getVersion()}
 
 `);

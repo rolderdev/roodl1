@@ -1,6 +1,6 @@
 'use strict';
 
-const rolderNodeLibrary = require('../rolder/nodelibrary').default;
+const rolderNodeLibrary = require('../rolderNodeLibrary').default;
 
 function formatDynamicPorts(nodeMetadata) {
   const dynamicports = [];
