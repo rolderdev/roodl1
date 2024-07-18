@@ -55,7 +55,7 @@ jobs:
       - name: Install dependencies 🏗
         run: npm install
 
-      - name: Build Noodl Viewer (build bundles and copy them to Roodl Editor)
+      - name: Build Roodl Viewer (build bundles and copy them to Roodl Editor)
         run: npm run build:editor:_viewer
         env:
           WORKSPACE_PATH: .
