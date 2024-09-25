@@ -52,9 +52,14 @@ const regexList: RegExp[] = [
 
   /* MacOS */
   /.*\.dmg$/,
-  /.*\.blockmap$/
+  /.*\.blockmap$/,
+
+  /* Linux */
+  /.*$/
 ];
 
 fs.mkdirSync(destinationFolder, { recursive: true });
 
 copyFilesMatchingRegex(sourceFolder, destinationFolder, regexList);
+// Linux
+copyFilesMatchingRegex(sourceFolder + '/linux-unpacked', destinationFolder + '/linux-unpacked', regexList);

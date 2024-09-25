@@ -4,7 +4,7 @@
   "description": "Low-code for when experience matter",
   "author": "Rolder <mail@rolder.ru>",
   "homepage": "https://rolder.ru",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "main": "src/main/main.js",
   "scripts": {
     "build": "npx ts-node -P ./tsconfig.build.json ./scripts/build.ts",
