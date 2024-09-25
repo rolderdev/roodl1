@@ -397,7 +397,7 @@ function generateNodeLibrary(nodeRegister) {
 
   
   const coreNodes = [
-    ...[ window.R.packages ? Object.values(window.R.packages).flat() : []],
+    ...[ window.R?.packages ? Object.values(window.R.packages).flat() : []],
     {
       name: 'UI Elements',
       description: 'Buttons, inputs, containers, media',
