@@ -1,4 +1,4 @@
-export default [
+/* export default [
     {
       name: 'Rolder Kit - App',
       type: '',
@@ -167,3 +167,4 @@ export default [
       ]
     }  
   ];
+ */

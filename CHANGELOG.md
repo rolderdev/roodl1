@@ -1,5 +1,9 @@
 # Changelog
 
+## 2024-09-26 v1.1.0
+
+[Новость](https://docs.rolder.app/#/newspost/mv6-KZIBFk35karOoyDD)
+
 ## 2024-07-18 v1.0.0
 
 Больше нет планов что-то менять в Roodl, поэтому версия 1.0.0 
