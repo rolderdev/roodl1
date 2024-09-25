@@ -395,9 +395,11 @@ function generateNodeLibrary(nodeRegister) {
     });
   });
 
+  let rolderNodes = [];
+  if (window.R?.packages) rolderNodes = Object.values(window.R.packages).flat();
   
   const coreNodes = [
-    ...[ window.R?.packages ? Object.values(window.R.packages).flat() : []],
+    ...rolderNodes,
     {
       name: 'UI Elements',
       description: 'Buttons, inputs, containers, media',
@@ -594,7 +596,7 @@ function generateNodeLibrary(nodeRegister) {
       ]
     }
   ];
-
+  
   obj.nodeIndex = {
     coreNodes
   };
