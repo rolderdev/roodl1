@@ -30,6 +30,9 @@
       "dpkg": {
         "pkg-path": "dpkg"
       },
+      "fpm": {
+        "pkg-path": "fpm"
+      },
       "glib": {
         "pkg-path": "glib",
         "pkg-group": "gui"
@@ -105,6 +108,9 @@
       "nss": {
         "pkg-path": "nss",
         "pkg-group": "gui"
+      },
+      "ruby": {
+        "pkg-path": "ruby"
       },
       "xdg-utils": {
         "pkg-path": "xdg-utils",
@@ -1836,6 +1842,114 @@
       "priority": 5
     },
     {
+      "attr_path": "xorg.libXScrnSaver",
+      "broken": false,
+      "derivation": "/nix/store/qi52ld6psk0y6p3k4xz1wjd6dknizi3q-libXScrnSaver-1.2.4.drv",
+      "install_id": "libxscrnsaver",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=a79cfe0ebd24952b580b1cf08cd906354996d547",
+      "name": "libXScrnSaver-1.2.4",
+      "pname": "libXScrnSaver",
+      "rev": "a79cfe0ebd24952b580b1cf08cd906354996d547",
+      "rev_count": 750629,
+      "rev_date": "2025-02-08T13:21:17Z",
+      "scrape_date": "2025-02-09T05:15:18Z",
+      "stabilities": [
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "1.2.4",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "out": "/nix/store/ih5silh649mqr2g09n8acg5mda6nbq9l-libXScrnSaver-1.2.4"
+      },
+      "system": "aarch64-linux",
+      "group": "x11",
+      "priority": 5
+    },
+    {
+      "attr_path": "xorg.libXScrnSaver",
+      "broken": false,
+      "derivation": "/nix/store/r881pvridvmbykskpzkfsn4a43m91wm1-libXScrnSaver-1.2.4.drv",
+      "install_id": "libxscrnsaver",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=a79cfe0ebd24952b580b1cf08cd906354996d547",
+      "name": "libXScrnSaver-1.2.4",
+      "pname": "libXScrnSaver",
+      "rev": "a79cfe0ebd24952b580b1cf08cd906354996d547",
+      "rev_count": 750629,
+      "rev_date": "2025-02-08T13:21:17Z",
+      "scrape_date": "2025-02-09T05:15:18Z",
+      "stabilities": [
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "1.2.4",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "out": "/nix/store/8zcsk1sj4qgc81j7b9ydan1h7kkagclq-libXScrnSaver-1.2.4"
+      },
+      "system": "x86_64-linux",
+      "group": "x11",
+      "priority": 5
+    },
+    {
+      "attr_path": "xorg.libXtst",
+      "broken": false,
+      "derivation": "/nix/store/2wxah0736b7z5wl3vrfyb4b3pyw0dlkj-libXtst-1.2.5.drv",
+      "install_id": "libxtst",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=a79cfe0ebd24952b580b1cf08cd906354996d547",
+      "name": "libXtst-1.2.5",
+      "pname": "libXtst",
+      "rev": "a79cfe0ebd24952b580b1cf08cd906354996d547",
+      "rev_count": 750629,
+      "rev_date": "2025-02-08T13:21:17Z",
+      "scrape_date": "2025-02-09T05:15:18Z",
+      "stabilities": [
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "1.2.5",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "out": "/nix/store/zb5mrf9xnzf0gi9p6ayncf98c13l5a1n-libXtst-1.2.5"
+      },
+      "system": "aarch64-linux",
+      "group": "x11",
+      "priority": 5
+    },
+    {
+      "attr_path": "xorg.libXtst",
+      "broken": false,
+      "derivation": "/nix/store/wnpgwd80ls9wmmnk15i9zv7pa55lc3rk-libXtst-1.2.5.drv",
+      "install_id": "libxtst",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=a79cfe0ebd24952b580b1cf08cd906354996d547",
+      "name": "libXtst-1.2.5",
+      "pname": "libXtst",
+      "rev": "a79cfe0ebd24952b580b1cf08cd906354996d547",
+      "rev_count": 750629,
+      "rev_date": "2025-02-08T13:21:17Z",
+      "scrape_date": "2025-02-09T05:15:18Z",
+      "stabilities": [
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "1.2.5",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "out": "/nix/store/radaww35hcvzwhhdz4n9wa31x9234a7a-libXtst-1.2.5"
+      },
+      "system": "x86_64-linux",
+      "group": "x11",
+      "priority": 5
+    },
+    {
       "attr_path": "dpkg",
       "broken": false,
       "derivation": "/nix/store/06g0h2k4hgdlqxjq9sravxc18x76lb1h-dpkg-1.22.11.drv",
@@ -1946,6 +2060,122 @@
       ],
       "outputs": {
         "out": "/nix/store/w899z2r43ab0vr8fjj130r2c83y08zav-dpkg-1.22.11"
+      },
+      "system": "x86_64-linux",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "fpm",
+      "broken": false,
+      "derivation": "/nix/store/askwj493ayp1lrgak57n79yvw5fdfifk-fpm-1.15.1.drv",
+      "description": "Tool to build packages for multiple platforms with ease",
+      "install_id": "fpm",
+      "license": "MIT",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=a79cfe0ebd24952b580b1cf08cd906354996d547",
+      "name": "fpm-1.15.1",
+      "pname": "fpm",
+      "rev": "a79cfe0ebd24952b580b1cf08cd906354996d547",
+      "rev_count": 750629,
+      "rev_date": "2025-02-08T13:21:17Z",
+      "scrape_date": "2025-02-09T05:15:18Z",
+      "stabilities": [
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "1.15.1",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "out": "/nix/store/0nzsk0svqpd7vh7mvf7zzpc9b6s4kx95-fpm-1.15.1"
+      },
+      "system": "aarch64-darwin",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "fpm",
+      "broken": false,
+      "derivation": "/nix/store/x41zxyh289c59c5425vwvq8530pnyciq-fpm-1.15.1.drv",
+      "description": "Tool to build packages for multiple platforms with ease",
+      "install_id": "fpm",
+      "license": "MIT",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=a79cfe0ebd24952b580b1cf08cd906354996d547",
+      "name": "fpm-1.15.1",
+      "pname": "fpm",
+      "rev": "a79cfe0ebd24952b580b1cf08cd906354996d547",
+      "rev_count": 750629,
+      "rev_date": "2025-02-08T13:21:17Z",
+      "scrape_date": "2025-02-09T05:15:18Z",
+      "stabilities": [
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "1.15.1",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "out": "/nix/store/dj14wf5yzgq79ch49pkaqfj47zam2n44-fpm-1.15.1"
+      },
+      "system": "aarch64-linux",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "fpm",
+      "broken": false,
+      "derivation": "/nix/store/2g467y8qafqmh29wsdwsk5f2nfxzv9mg-fpm-1.15.1.drv",
+      "description": "Tool to build packages for multiple platforms with ease",
+      "install_id": "fpm",
+      "license": "MIT",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=a79cfe0ebd24952b580b1cf08cd906354996d547",
+      "name": "fpm-1.15.1",
+      "pname": "fpm",
+      "rev": "a79cfe0ebd24952b580b1cf08cd906354996d547",
+      "rev_count": 750629,
+      "rev_date": "2025-02-08T13:21:17Z",
+      "scrape_date": "2025-02-09T05:15:18Z",
+      "stabilities": [
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "1.15.1",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "out": "/nix/store/3vy9vc0cjfwd6mccydij5p3qq0g9nn03-fpm-1.15.1"
+      },
+      "system": "x86_64-darwin",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "fpm",
+      "broken": false,
+      "derivation": "/nix/store/9j9yjkwrp8hfg8dzlk9nipsvlb64sgrc-fpm-1.15.1.drv",
+      "description": "Tool to build packages for multiple platforms with ease",
+      "install_id": "fpm",
+      "license": "MIT",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=a79cfe0ebd24952b580b1cf08cd906354996d547",
+      "name": "fpm-1.15.1",
+      "pname": "fpm",
+      "rev": "a79cfe0ebd24952b580b1cf08cd906354996d547",
+      "rev_count": 750629,
+      "rev_date": "2025-02-08T13:21:17Z",
+      "scrape_date": "2025-02-09T05:15:18Z",
+      "stabilities": [
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "1.15.1",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "out": "/nix/store/wai2dlai247gvhl6i82fic72qirmwy9w-fpm-1.15.1"
       },
       "system": "x86_64-linux",
       "group": "toplevel",
@@ -2080,13 +2310,15 @@
       "priority": 5
     },
     {
-      "attr_path": "xorg.libXScrnSaver",
+      "attr_path": "ruby",
       "broken": false,
-      "derivation": "/nix/store/qi52ld6psk0y6p3k4xz1wjd6dknizi3q-libXScrnSaver-1.2.4.drv",
-      "install_id": "libxscrnsaver",
+      "derivation": "/nix/store/yirnp0yvl26si87cbn2jqh4h2iz3gl33-ruby-3.3.6.drv",
+      "description": "Object-oriented language for quick and easy programming",
+      "install_id": "ruby",
+      "license": "Ruby",
       "locked_url": "https://github.com/flox/nixpkgs?rev=a79cfe0ebd24952b580b1cf08cd906354996d547",
-      "name": "libXScrnSaver-1.2.4",
-      "pname": "libXScrnSaver",
+      "name": "ruby-3.3.6",
+      "pname": "ruby",
       "rev": "a79cfe0ebd24952b580b1cf08cd906354996d547",
       "rev_count": 750629,
       "rev_date": "2025-02-08T13:21:17Z",
@@ -2095,25 +2327,58 @@
         "unstable"
       ],
       "unfree": false,
-      "version": "1.2.4",
+      "version": "3.3.6",
       "outputs_to_install": [
         "out"
       ],
       "outputs": {
-        "out": "/nix/store/ih5silh649mqr2g09n8acg5mda6nbq9l-libXScrnSaver-1.2.4"
+        "devdoc": "/nix/store/xsbjk66l80b6rhjjvfbraq8v3rx7z3fn-ruby-3.3.6-devdoc",
+        "out": "/nix/store/yqfrmsgsmw4lr50cahqg7pn2mjv1lyjp-ruby-3.3.6"
+      },
+      "system": "aarch64-darwin",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "ruby",
+      "broken": false,
+      "derivation": "/nix/store/8zbcizqcqvpynp1i5rm4rrfypg8lm71w-ruby-3.3.6.drv",
+      "description": "Object-oriented language for quick and easy programming",
+      "install_id": "ruby",
+      "license": "Ruby",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=a79cfe0ebd24952b580b1cf08cd906354996d547",
+      "name": "ruby-3.3.6",
+      "pname": "ruby",
+      "rev": "a79cfe0ebd24952b580b1cf08cd906354996d547",
+      "rev_count": 750629,
+      "rev_date": "2025-02-08T13:21:17Z",
+      "scrape_date": "2025-02-09T05:15:18Z",
+      "stabilities": [
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "3.3.6",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "devdoc": "/nix/store/n8dkirqx7vv2dxj5ybmvi0ld9xhklvcr-ruby-3.3.6-devdoc",
+        "out": "/nix/store/igdc0vm11r7h0ai09p2i0fgyadl326hv-ruby-3.3.6"
       },
       "system": "aarch64-linux",
-      "group": "x11",
+      "group": "toplevel",
       "priority": 5
     },
     {
-      "attr_path": "xorg.libXScrnSaver",
+      "attr_path": "ruby",
       "broken": false,
-      "derivation": "/nix/store/r881pvridvmbykskpzkfsn4a43m91wm1-libXScrnSaver-1.2.4.drv",
-      "install_id": "libxscrnsaver",
+      "derivation": "/nix/store/a23lvcwyy9rlh3rn9ghdm2xy87zdsfci-ruby-3.3.6.drv",
+      "description": "Object-oriented language for quick and easy programming",
+      "install_id": "ruby",
+      "license": "Ruby",
       "locked_url": "https://github.com/flox/nixpkgs?rev=a79cfe0ebd24952b580b1cf08cd906354996d547",
-      "name": "libXScrnSaver-1.2.4",
-      "pname": "libXScrnSaver",
+      "name": "ruby-3.3.6",
+      "pname": "ruby",
       "rev": "a79cfe0ebd24952b580b1cf08cd906354996d547",
       "rev_count": 750629,
       "rev_date": "2025-02-08T13:21:17Z",
@@ -2122,69 +2387,46 @@
         "unstable"
       ],
       "unfree": false,
-      "version": "1.2.4",
+      "version": "3.3.6",
       "outputs_to_install": [
         "out"
       ],
       "outputs": {
-        "out": "/nix/store/8zcsk1sj4qgc81j7b9ydan1h7kkagclq-libXScrnSaver-1.2.4"
+        "devdoc": "/nix/store/m83rym8nwzhcff0rwhfm8frgqb7v8gcg-ruby-3.3.6-devdoc",
+        "out": "/nix/store/4cjnzb34nkn7x9d4y5r794c0ra963ym2-ruby-3.3.6"
+      },
+      "system": "x86_64-darwin",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "ruby",
+      "broken": false,
+      "derivation": "/nix/store/yjczxngnazci2mr4sh453qx8z6qif86d-ruby-3.3.6.drv",
+      "description": "Object-oriented language for quick and easy programming",
+      "install_id": "ruby",
+      "license": "Ruby",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=a79cfe0ebd24952b580b1cf08cd906354996d547",
+      "name": "ruby-3.3.6",
+      "pname": "ruby",
+      "rev": "a79cfe0ebd24952b580b1cf08cd906354996d547",
+      "rev_count": 750629,
+      "rev_date": "2025-02-08T13:21:17Z",
+      "scrape_date": "2025-02-09T05:15:18Z",
+      "stabilities": [
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "3.3.6",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "devdoc": "/nix/store/xm3nl6pj9jlr8j39hvf99pbajd87k2ny-ruby-3.3.6-devdoc",
+        "out": "/nix/store/4v2y8rp37y4cigqa8s2y6gnk5zkmkfdd-ruby-3.3.6"
       },
       "system": "x86_64-linux",
-      "group": "x11",
-      "priority": 5
-    },
-    {
-      "attr_path": "xorg.libXtst",
-      "broken": false,
-      "derivation": "/nix/store/2wxah0736b7z5wl3vrfyb4b3pyw0dlkj-libXtst-1.2.5.drv",
-      "install_id": "libxtst",
-      "locked_url": "https://github.com/flox/nixpkgs?rev=a79cfe0ebd24952b580b1cf08cd906354996d547",
-      "name": "libXtst-1.2.5",
-      "pname": "libXtst",
-      "rev": "a79cfe0ebd24952b580b1cf08cd906354996d547",
-      "rev_count": 750629,
-      "rev_date": "2025-02-08T13:21:17Z",
-      "scrape_date": "2025-02-09T05:15:18Z",
-      "stabilities": [
-        "unstable"
-      ],
-      "unfree": false,
-      "version": "1.2.5",
-      "outputs_to_install": [
-        "out"
-      ],
-      "outputs": {
-        "out": "/nix/store/zb5mrf9xnzf0gi9p6ayncf98c13l5a1n-libXtst-1.2.5"
-      },
-      "system": "aarch64-linux",
-      "group": "x11",
-      "priority": 5
-    },
-    {
-      "attr_path": "xorg.libXtst",
-      "broken": false,
-      "derivation": "/nix/store/wnpgwd80ls9wmmnk15i9zv7pa55lc3rk-libXtst-1.2.5.drv",
-      "install_id": "libxtst",
-      "locked_url": "https://github.com/flox/nixpkgs?rev=a79cfe0ebd24952b580b1cf08cd906354996d547",
-      "name": "libXtst-1.2.5",
-      "pname": "libXtst",
-      "rev": "a79cfe0ebd24952b580b1cf08cd906354996d547",
-      "rev_count": 750629,
-      "rev_date": "2025-02-08T13:21:17Z",
-      "scrape_date": "2025-02-09T05:15:18Z",
-      "stabilities": [
-        "unstable"
-      ],
-      "unfree": false,
-      "version": "1.2.5",
-      "outputs_to_install": [
-        "out"
-      ],
-      "outputs": {
-        "out": "/nix/store/radaww35hcvzwhhdz4n9wa31x9234a7a-libXtst-1.2.5"
-      },
-      "system": "x86_64-linux",
-      "group": "x11",
+      "group": "toplevel",
       "priority": 5
     }
   ]

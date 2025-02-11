@@ -79,6 +79,8 @@ libappindicator.pkg-group = "gui"
 libxscrnsaver.pkg-path = "xorg.libXScrnSaver"             # это аналог libxss1
 libxscrnsaver.systems = ["aarch64-linux", "x86_64-linux"]
 libxscrnsaver.pkg-group = "x11"
+ruby.pkg-path = "ruby"
+fpm.pkg-path = "fpm"
 
 ## Environment Variables ---------------------------------------------
 ##  ... available for use in the activated environment
