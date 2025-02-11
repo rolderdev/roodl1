@@ -1,8 +1,8 @@
 {
-  "name": "@noodl/types",
-  "version": "2.7.0",
-  "main": "src/index.d.ts",
-  "description": "",
-  "author": "Fluxscape <contact@fluxscape.io>",
-  "homepage": "https://fluxscape.io"
+	"name": "@noodl/types",
+	"version": "2.7.0",
+	"main": "src/index.d.ts",
+	"description": "",
+	"author": "Roodl <mail@rolder.ru>",
+	"homepage": "https://rolder.ru"
 }

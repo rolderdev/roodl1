@@ -1,8 +1,8 @@
 {
-  "name": "@noodl/platform",
-  "version": "2.7.0",
-  "main": "src/index.ts",
-  "description": "Cross platform implementation of platform specific features.",
-  "author": "Fluxscape <contact@fluxscape.io>",
-  "homepage": "https://fluxscape.io"
+	"name": "@noodl/platform",
+	"version": "2.7.0",
+	"main": "src/index.ts",
+	"description": "Cross platform implementation of platform specific features.",
+	"author": "Roodl <mail@rolder.ru>",
+	"homepage": "https://rolder.ru"
 }
