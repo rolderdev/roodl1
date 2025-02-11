@@ -50,6 +50,9 @@
           "x86_64-linux"
         ]
       },
+      "libnotify": {
+        "pkg-path": "libnotify"
+      },
       "libxkbcommon": {
         "pkg-path": "libxkbcommon",
         "pkg-group": "gui"
@@ -62,9 +65,6 @@
       "nss": {
         "pkg-path": "nss",
         "pkg-group": "gui"
-      },
-      "ruby": {
-        "pkg-path": "ruby"
       }
     },
     "hook": {},
@@ -1408,15 +1408,15 @@
       "priority": 5
     },
     {
-      "attr_path": "ruby",
+      "attr_path": "libnotify",
       "broken": false,
-      "derivation": "/nix/store/yirnp0yvl26si87cbn2jqh4h2iz3gl33-ruby-3.3.6.drv",
-      "description": "Object-oriented language for quick and easy programming",
-      "install_id": "ruby",
-      "license": "Ruby",
+      "derivation": "/nix/store/cv39jshxk02lddi6gda17w166j0ygk76-libnotify-0.8.3.drv",
+      "description": "Library that sends desktop notifications to a notification daemon",
+      "install_id": "libnotify",
+      "license": "LGPL-2.1",
       "locked_url": "https://github.com/flox/nixpkgs?rev=a79cfe0ebd24952b580b1cf08cd906354996d547",
-      "name": "ruby-3.3.6",
-      "pname": "ruby",
+      "name": "libnotify-0.8.3",
+      "pname": "libnotify",
       "rev": "a79cfe0ebd24952b580b1cf08cd906354996d547",
       "rev_count": 750629,
       "rev_date": "2025-02-08T13:21:17Z",
@@ -1425,28 +1425,30 @@
         "unstable"
       ],
       "unfree": false,
-      "version": "3.3.6",
+      "version": "0.8.3",
       "outputs_to_install": [
+        "man",
         "out"
       ],
       "outputs": {
-        "devdoc": "/nix/store/xsbjk66l80b6rhjjvfbraq8v3rx7z3fn-ruby-3.3.6-devdoc",
-        "out": "/nix/store/yqfrmsgsmw4lr50cahqg7pn2mjv1lyjp-ruby-3.3.6"
+        "dev": "/nix/store/xwi262p0w6yns80v39q53nk07yb31zrp-libnotify-0.8.3-dev",
+        "man": "/nix/store/lh9cdmxb9id1cp1n512dsy9sqxiy2y9p-libnotify-0.8.3-man",
+        "out": "/nix/store/6xisqrg6c7vc029d36rrlqyhfyqxismn-libnotify-0.8.3"
       },
       "system": "aarch64-darwin",
       "group": "toplevel",
       "priority": 5
     },
     {
-      "attr_path": "ruby",
+      "attr_path": "libnotify",
       "broken": false,
-      "derivation": "/nix/store/8zbcizqcqvpynp1i5rm4rrfypg8lm71w-ruby-3.3.6.drv",
-      "description": "Object-oriented language for quick and easy programming",
-      "install_id": "ruby",
-      "license": "Ruby",
+      "derivation": "/nix/store/6y2bybvh0cp0zpaglmmw82qwrdhfd67g-libnotify-0.8.3.drv",
+      "description": "Library that sends desktop notifications to a notification daemon",
+      "install_id": "libnotify",
+      "license": "LGPL-2.1",
       "locked_url": "https://github.com/flox/nixpkgs?rev=a79cfe0ebd24952b580b1cf08cd906354996d547",
-      "name": "ruby-3.3.6",
-      "pname": "ruby",
+      "name": "libnotify-0.8.3",
+      "pname": "libnotify",
       "rev": "a79cfe0ebd24952b580b1cf08cd906354996d547",
       "rev_count": 750629,
       "rev_date": "2025-02-08T13:21:17Z",
@@ -1455,28 +1457,30 @@
         "unstable"
       ],
       "unfree": false,
-      "version": "3.3.6",
+      "version": "0.8.3",
       "outputs_to_install": [
+        "man",
         "out"
       ],
       "outputs": {
-        "devdoc": "/nix/store/n8dkirqx7vv2dxj5ybmvi0ld9xhklvcr-ruby-3.3.6-devdoc",
-        "out": "/nix/store/igdc0vm11r7h0ai09p2i0fgyadl326hv-ruby-3.3.6"
+        "dev": "/nix/store/3idzcw80xq6qy4zhhvsah7cx4yzxdj2z-libnotify-0.8.3-dev",
+        "man": "/nix/store/z5jmkfb9h36ndy5s9ifm1y16j28k8w5p-libnotify-0.8.3-man",
+        "out": "/nix/store/16xlyglzcf6paxfgc5qmq04wx9pxg2l8-libnotify-0.8.3"
       },
       "system": "aarch64-linux",
       "group": "toplevel",
       "priority": 5
     },
     {
-      "attr_path": "ruby",
+      "attr_path": "libnotify",
       "broken": false,
-      "derivation": "/nix/store/a23lvcwyy9rlh3rn9ghdm2xy87zdsfci-ruby-3.3.6.drv",
-      "description": "Object-oriented language for quick and easy programming",
-      "install_id": "ruby",
-      "license": "Ruby",
+      "derivation": "/nix/store/9c7ykgvm9yjpxixgi9p50zgc2a722p85-libnotify-0.8.3.drv",
+      "description": "Library that sends desktop notifications to a notification daemon",
+      "install_id": "libnotify",
+      "license": "LGPL-2.1",
       "locked_url": "https://github.com/flox/nixpkgs?rev=a79cfe0ebd24952b580b1cf08cd906354996d547",
-      "name": "ruby-3.3.6",
-      "pname": "ruby",
+      "name": "libnotify-0.8.3",
+      "pname": "libnotify",
       "rev": "a79cfe0ebd24952b580b1cf08cd906354996d547",
       "rev_count": 750629,
       "rev_date": "2025-02-08T13:21:17Z",
@@ -1485,28 +1489,30 @@
         "unstable"
       ],
       "unfree": false,
-      "version": "3.3.6",
+      "version": "0.8.3",
       "outputs_to_install": [
+        "man",
         "out"
       ],
       "outputs": {
-        "devdoc": "/nix/store/m83rym8nwzhcff0rwhfm8frgqb7v8gcg-ruby-3.3.6-devdoc",
-        "out": "/nix/store/4cjnzb34nkn7x9d4y5r794c0ra963ym2-ruby-3.3.6"
+        "dev": "/nix/store/acj7y8vrd501nwshr7r682zff9giljxp-libnotify-0.8.3-dev",
+        "man": "/nix/store/gpp39qh5a7q8ms66g4cr5n0h5my5h879-libnotify-0.8.3-man",
+        "out": "/nix/store/2vnbd3skz69m5h6czj0x0hpgwn5rnww4-libnotify-0.8.3"
       },
       "system": "x86_64-darwin",
       "group": "toplevel",
       "priority": 5
     },
     {
-      "attr_path": "ruby",
+      "attr_path": "libnotify",
       "broken": false,
-      "derivation": "/nix/store/yjczxngnazci2mr4sh453qx8z6qif86d-ruby-3.3.6.drv",
-      "description": "Object-oriented language for quick and easy programming",
-      "install_id": "ruby",
-      "license": "Ruby",
+      "derivation": "/nix/store/s42rkzfpyk2sms25f880n3m76na9y2bf-libnotify-0.8.3.drv",
+      "description": "Library that sends desktop notifications to a notification daemon",
+      "install_id": "libnotify",
+      "license": "LGPL-2.1",
       "locked_url": "https://github.com/flox/nixpkgs?rev=a79cfe0ebd24952b580b1cf08cd906354996d547",
-      "name": "ruby-3.3.6",
-      "pname": "ruby",
+      "name": "libnotify-0.8.3",
+      "pname": "libnotify",
       "rev": "a79cfe0ebd24952b580b1cf08cd906354996d547",
       "rev_count": 750629,
       "rev_date": "2025-02-08T13:21:17Z",
@@ -1515,13 +1521,15 @@
         "unstable"
       ],
       "unfree": false,
-      "version": "3.3.6",
+      "version": "0.8.3",
       "outputs_to_install": [
+        "man",
         "out"
       ],
       "outputs": {
-        "devdoc": "/nix/store/xm3nl6pj9jlr8j39hvf99pbajd87k2ny-ruby-3.3.6-devdoc",
-        "out": "/nix/store/4v2y8rp37y4cigqa8s2y6gnk5zkmkfdd-ruby-3.3.6"
+        "dev": "/nix/store/pcn41k2apxz9f34v3kas45gyvx81amj2-libnotify-0.8.3-dev",
+        "man": "/nix/store/cbpcfh69im0dwr75m1cn9hbczg8if8fg-libnotify-0.8.3-man",
+        "out": "/nix/store/w7gyk2bj42rygr8p0mygs61km50rl4xr-libnotify-0.8.3"
       },
       "system": "x86_64-linux",
       "group": "toplevel",

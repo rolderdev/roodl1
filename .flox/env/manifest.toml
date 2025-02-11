@@ -51,8 +51,27 @@ libxkbcommon.pkg-group = "gui"
 alsa-lib.pkg-path = "alsa-lib"
 alsa-lib.systems = ["aarch64-linux", "x86_64-linux"]
 alsa-lib.pkg-group = "audio"
-ruby.pkg-path = "ruby"
+
 dpkg.pkg-path = "dpkg"
+libnotify.pkg-path = "libnotify"
+
+libxtst.pkg-path = "libxtst" # это аналог libxtst6
+libxtst.pkg-group = "x11"
+
+xdg-utils.pkg-path = "xdg-utils"
+xdg-utils.pkg-group = "tools"
+
+at-spi2-core.pkg-path = "at-spi2-core"   # это аналог libatspi2.0-0
+at-spi2-core.pkg-group = "accessibility"
+
+libuuid.pkg-path = "libuuid" # это аналог libuuid1
+libuuid.pkg-group = "system"
+
+libsecret.pkg-path = "libsecret" # это аналог libsecret-1-0
+libsecret.pkg-group = "security"
+
+libappindicator.pkg-path = "libappindicator" # это аналог libappindicator3-1
+libappindicator.pkg-group = "gui"
 
 
 ## Environment Variables ---------------------------------------------
