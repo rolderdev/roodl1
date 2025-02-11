@@ -23,6 +23,9 @@
         "pkg-path": "dbus",
         "pkg-group": "gui"
       },
+      "dpkg": {
+        "pkg-path": "dpkg"
+      },
       "glib": {
         "pkg-path": "glib",
         "pkg-group": "gui"
@@ -59,6 +62,9 @@
       "nss": {
         "pkg-path": "nss",
         "pkg-group": "gui"
+      },
+      "ruby": {
+        "pkg-path": "ruby"
       }
     },
     "hook": {},
@@ -1283,6 +1289,242 @@
       },
       "system": "x86_64-linux",
       "group": "node",
+      "priority": 5
+    },
+    {
+      "attr_path": "dpkg",
+      "broken": false,
+      "derivation": "/nix/store/06g0h2k4hgdlqxjq9sravxc18x76lb1h-dpkg-1.22.11.drv",
+      "description": "Debian package manager",
+      "install_id": "dpkg",
+      "license": "GPL-2.0-or-later",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=a79cfe0ebd24952b580b1cf08cd906354996d547",
+      "name": "dpkg-1.22.11",
+      "pname": "dpkg",
+      "rev": "a79cfe0ebd24952b580b1cf08cd906354996d547",
+      "rev_count": 750629,
+      "rev_date": "2025-02-08T13:21:17Z",
+      "scrape_date": "2025-02-09T05:15:18Z",
+      "stabilities": [
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "1.22.11",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "out": "/nix/store/gbjsyagadx5g6kg01qffzn5k9z82q8ad-dpkg-1.22.11"
+      },
+      "system": "aarch64-darwin",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "dpkg",
+      "broken": false,
+      "derivation": "/nix/store/6p3v8hkwv0sbp7ih8p1j7hlbbjb31xpw-dpkg-1.22.11.drv",
+      "description": "Debian package manager",
+      "install_id": "dpkg",
+      "license": "GPL-2.0-or-later",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=a79cfe0ebd24952b580b1cf08cd906354996d547",
+      "name": "dpkg-1.22.11",
+      "pname": "dpkg",
+      "rev": "a79cfe0ebd24952b580b1cf08cd906354996d547",
+      "rev_count": 750629,
+      "rev_date": "2025-02-08T13:21:17Z",
+      "scrape_date": "2025-02-09T05:15:18Z",
+      "stabilities": [
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "1.22.11",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "out": "/nix/store/9826s0gqanfvrddhjisqcxzafxxmpcsm-dpkg-1.22.11"
+      },
+      "system": "aarch64-linux",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "dpkg",
+      "broken": false,
+      "derivation": "/nix/store/8xp5cffqwbg0g58hxm5mb8gxlbdphhrk-dpkg-1.22.11.drv",
+      "description": "Debian package manager",
+      "install_id": "dpkg",
+      "license": "GPL-2.0-or-later",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=a79cfe0ebd24952b580b1cf08cd906354996d547",
+      "name": "dpkg-1.22.11",
+      "pname": "dpkg",
+      "rev": "a79cfe0ebd24952b580b1cf08cd906354996d547",
+      "rev_count": 750629,
+      "rev_date": "2025-02-08T13:21:17Z",
+      "scrape_date": "2025-02-09T05:15:18Z",
+      "stabilities": [
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "1.22.11",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "out": "/nix/store/lz1ag4hf9vxqqah81dhxlsylfhnmyn6l-dpkg-1.22.11"
+      },
+      "system": "x86_64-darwin",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "dpkg",
+      "broken": false,
+      "derivation": "/nix/store/czbs4pl7105aj4040xdcs1b11cz449df-dpkg-1.22.11.drv",
+      "description": "Debian package manager",
+      "install_id": "dpkg",
+      "license": "GPL-2.0-or-later",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=a79cfe0ebd24952b580b1cf08cd906354996d547",
+      "name": "dpkg-1.22.11",
+      "pname": "dpkg",
+      "rev": "a79cfe0ebd24952b580b1cf08cd906354996d547",
+      "rev_count": 750629,
+      "rev_date": "2025-02-08T13:21:17Z",
+      "scrape_date": "2025-02-09T05:15:18Z",
+      "stabilities": [
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "1.22.11",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "out": "/nix/store/w899z2r43ab0vr8fjj130r2c83y08zav-dpkg-1.22.11"
+      },
+      "system": "x86_64-linux",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "ruby",
+      "broken": false,
+      "derivation": "/nix/store/yirnp0yvl26si87cbn2jqh4h2iz3gl33-ruby-3.3.6.drv",
+      "description": "Object-oriented language for quick and easy programming",
+      "install_id": "ruby",
+      "license": "Ruby",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=a79cfe0ebd24952b580b1cf08cd906354996d547",
+      "name": "ruby-3.3.6",
+      "pname": "ruby",
+      "rev": "a79cfe0ebd24952b580b1cf08cd906354996d547",
+      "rev_count": 750629,
+      "rev_date": "2025-02-08T13:21:17Z",
+      "scrape_date": "2025-02-09T05:15:18Z",
+      "stabilities": [
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "3.3.6",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "devdoc": "/nix/store/xsbjk66l80b6rhjjvfbraq8v3rx7z3fn-ruby-3.3.6-devdoc",
+        "out": "/nix/store/yqfrmsgsmw4lr50cahqg7pn2mjv1lyjp-ruby-3.3.6"
+      },
+      "system": "aarch64-darwin",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "ruby",
+      "broken": false,
+      "derivation": "/nix/store/8zbcizqcqvpynp1i5rm4rrfypg8lm71w-ruby-3.3.6.drv",
+      "description": "Object-oriented language for quick and easy programming",
+      "install_id": "ruby",
+      "license": "Ruby",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=a79cfe0ebd24952b580b1cf08cd906354996d547",
+      "name": "ruby-3.3.6",
+      "pname": "ruby",
+      "rev": "a79cfe0ebd24952b580b1cf08cd906354996d547",
+      "rev_count": 750629,
+      "rev_date": "2025-02-08T13:21:17Z",
+      "scrape_date": "2025-02-09T05:15:18Z",
+      "stabilities": [
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "3.3.6",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "devdoc": "/nix/store/n8dkirqx7vv2dxj5ybmvi0ld9xhklvcr-ruby-3.3.6-devdoc",
+        "out": "/nix/store/igdc0vm11r7h0ai09p2i0fgyadl326hv-ruby-3.3.6"
+      },
+      "system": "aarch64-linux",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "ruby",
+      "broken": false,
+      "derivation": "/nix/store/a23lvcwyy9rlh3rn9ghdm2xy87zdsfci-ruby-3.3.6.drv",
+      "description": "Object-oriented language for quick and easy programming",
+      "install_id": "ruby",
+      "license": "Ruby",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=a79cfe0ebd24952b580b1cf08cd906354996d547",
+      "name": "ruby-3.3.6",
+      "pname": "ruby",
+      "rev": "a79cfe0ebd24952b580b1cf08cd906354996d547",
+      "rev_count": 750629,
+      "rev_date": "2025-02-08T13:21:17Z",
+      "scrape_date": "2025-02-09T05:15:18Z",
+      "stabilities": [
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "3.3.6",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "devdoc": "/nix/store/m83rym8nwzhcff0rwhfm8frgqb7v8gcg-ruby-3.3.6-devdoc",
+        "out": "/nix/store/4cjnzb34nkn7x9d4y5r794c0ra963ym2-ruby-3.3.6"
+      },
+      "system": "x86_64-darwin",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "ruby",
+      "broken": false,
+      "derivation": "/nix/store/yjczxngnazci2mr4sh453qx8z6qif86d-ruby-3.3.6.drv",
+      "description": "Object-oriented language for quick and easy programming",
+      "install_id": "ruby",
+      "license": "Ruby",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=a79cfe0ebd24952b580b1cf08cd906354996d547",
+      "name": "ruby-3.3.6",
+      "pname": "ruby",
+      "rev": "a79cfe0ebd24952b580b1cf08cd906354996d547",
+      "rev_count": 750629,
+      "rev_date": "2025-02-08T13:21:17Z",
+      "scrape_date": "2025-02-09T05:15:18Z",
+      "stabilities": [
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "3.3.6",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "devdoc": "/nix/store/xm3nl6pj9jlr8j39hvf99pbajd87k2ny-ruby-3.3.6-devdoc",
+        "out": "/nix/store/4v2y8rp37y4cigqa8s2y6gnk5zkmkfdd-ruby-3.3.6"
+      },
+      "system": "x86_64-linux",
+      "group": "toplevel",
       "priority": 5
     }
   ]

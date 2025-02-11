@@ -51,6 +51,8 @@ libxkbcommon.pkg-group = "gui"
 alsa-lib.pkg-path = "alsa-lib"
 alsa-lib.systems = ["aarch64-linux", "x86_64-linux"]
 alsa-lib.pkg-group = "audio"
+ruby.pkg-path = "ruby"
+dpkg.pkg-path = "dpkg"
 
 
 ## Environment Variables ---------------------------------------------
