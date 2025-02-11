@@ -55,7 +55,8 @@ alsa-lib.pkg-group = "audio"
 dpkg.pkg-path = "dpkg"
 libnotify.pkg-path = "libnotify"
 
-libxtst.pkg-path = "libxtst" # это аналог libxtst6
+libxtst.pkg-path = "xorg.libXtst"                   # это аналог libxtst6
+libxtst.systems = ["aarch64-linux", "x86_64-linux"]
 libxtst.pkg-group = "x11"
 
 xdg-utils.pkg-path = "xdg-utils"
@@ -64,15 +65,20 @@ xdg-utils.pkg-group = "tools"
 at-spi2-core.pkg-path = "at-spi2-core"   # это аналог libatspi2.0-0
 at-spi2-core.pkg-group = "accessibility"
 
-libuuid.pkg-path = "libuuid" # это аналог libuuid1
+libuuid.pkg-path = "libuuid"                        # это аналог libuuid1
+libuuid.systems = ["aarch64-linux", "x86_64-linux"]
 libuuid.pkg-group = "system"
 
 libsecret.pkg-path = "libsecret" # это аналог libsecret-1-0
 libsecret.pkg-group = "security"
 
-libappindicator.pkg-path = "libappindicator" # это аналог libappindicator3-1
+libappindicator.pkg-path = "libappindicator"                # это аналог libappindicator3-1
+libappindicator.systems = ["aarch64-linux", "x86_64-linux"]
 libappindicator.pkg-group = "gui"
 
+libxscrnsaver.pkg-path = "xorg.libXScrnSaver"             # это аналог libxss1
+libxscrnsaver.systems = ["aarch64-linux", "x86_64-linux"]
+libxscrnsaver.pkg-group = "x11"
 
 ## Environment Variables ---------------------------------------------
 ##  ... available for use in the activated environment

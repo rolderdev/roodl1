@@ -11,6 +11,10 @@
           "x86_64-linux"
         ]
       },
+      "at-spi2-core": {
+        "pkg-path": "at-spi2-core",
+        "pkg-group": "accessibility"
+      },
       "atk": {
         "pkg-path": "atk",
         "pkg-group": "gui"
@@ -34,6 +38,14 @@
         "pkg-path": "gtk3",
         "pkg-group": "gui"
       },
+      "libappindicator": {
+        "pkg-path": "libappindicator",
+        "pkg-group": "gui",
+        "systems": [
+          "aarch64-linux",
+          "x86_64-linux"
+        ]
+      },
       "libdrm": {
         "pkg-path": "libdrm",
         "pkg-group": "gui",
@@ -53,9 +65,37 @@
       "libnotify": {
         "pkg-path": "libnotify"
       },
+      "libsecret": {
+        "pkg-path": "libsecret",
+        "pkg-group": "security"
+      },
+      "libuuid": {
+        "pkg-path": "libuuid",
+        "pkg-group": "system",
+        "systems": [
+          "aarch64-linux",
+          "x86_64-linux"
+        ]
+      },
       "libxkbcommon": {
         "pkg-path": "libxkbcommon",
         "pkg-group": "gui"
+      },
+      "libxscrnsaver": {
+        "pkg-path": "xorg.libXScrnSaver",
+        "pkg-group": "x11",
+        "systems": [
+          "aarch64-linux",
+          "x86_64-linux"
+        ]
+      },
+      "libxtst": {
+        "pkg-path": "xorg.libXtst",
+        "pkg-group": "x11",
+        "systems": [
+          "aarch64-linux",
+          "x86_64-linux"
+        ]
       },
       "nodejs": {
         "pkg-path": "nodejs",
@@ -65,6 +105,10 @@
       "nss": {
         "pkg-path": "nss",
         "pkg-group": "gui"
+      },
+      "xdg-utils": {
+        "pkg-path": "xdg-utils",
+        "pkg-group": "tools"
       }
     },
     "hook": {},
@@ -83,6 +127,128 @@
     }
   },
   "packages": [
+    {
+      "attr_path": "at-spi2-core",
+      "broken": false,
+      "derivation": "/nix/store/kzdflkwk9znyvac77x1566p70r3j2fnr-at-spi2-core-2.54.1.drv",
+      "description": "Assistive Technology Service Provider Interface protocol definitions and daemon for D-Bus",
+      "install_id": "at-spi2-core",
+      "license": "LGPL-2.1-or-later",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=a79cfe0ebd24952b580b1cf08cd906354996d547",
+      "name": "at-spi2-core-2.54.1",
+      "pname": "at-spi2-core",
+      "rev": "a79cfe0ebd24952b580b1cf08cd906354996d547",
+      "rev_count": 750629,
+      "rev_date": "2025-02-08T13:21:17Z",
+      "scrape_date": "2025-02-09T05:15:18Z",
+      "stabilities": [
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "2.54.1",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "dev": "/nix/store/dlwi96k1nv6n1w628h2r5g1qbkjglq2i-at-spi2-core-2.54.1-dev",
+        "out": "/nix/store/x5k0kdfq40wjsa66v4kwjsgsa31gkpn9-at-spi2-core-2.54.1"
+      },
+      "system": "aarch64-darwin",
+      "group": "accessibility",
+      "priority": 5
+    },
+    {
+      "attr_path": "at-spi2-core",
+      "broken": false,
+      "derivation": "/nix/store/8bdy0sgg1vy4aiqzd4662dzlr7y8fpw4-at-spi2-core-2.54.1.drv",
+      "description": "Assistive Technology Service Provider Interface protocol definitions and daemon for D-Bus",
+      "install_id": "at-spi2-core",
+      "license": "LGPL-2.1-or-later",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=a79cfe0ebd24952b580b1cf08cd906354996d547",
+      "name": "at-spi2-core-2.54.1",
+      "pname": "at-spi2-core",
+      "rev": "a79cfe0ebd24952b580b1cf08cd906354996d547",
+      "rev_count": 750629,
+      "rev_date": "2025-02-08T13:21:17Z",
+      "scrape_date": "2025-02-09T05:15:18Z",
+      "stabilities": [
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "2.54.1",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "debug": "/nix/store/a57pkjfi1nlimvjkmppbb9cscbx84jw4-at-spi2-core-2.54.1-debug",
+        "dev": "/nix/store/ddx2bbn0kmm3k05q7daqalxnrmfv81i7-at-spi2-core-2.54.1-dev",
+        "out": "/nix/store/zdii2as1dxf1c6cz1nr35nzzgwylxpfx-at-spi2-core-2.54.1"
+      },
+      "system": "aarch64-linux",
+      "group": "accessibility",
+      "priority": 5
+    },
+    {
+      "attr_path": "at-spi2-core",
+      "broken": false,
+      "derivation": "/nix/store/fbxydhgwlxv0x16aw1s8yn1xvi5asa8n-at-spi2-core-2.54.1.drv",
+      "description": "Assistive Technology Service Provider Interface protocol definitions and daemon for D-Bus",
+      "install_id": "at-spi2-core",
+      "license": "LGPL-2.1-or-later",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=a79cfe0ebd24952b580b1cf08cd906354996d547",
+      "name": "at-spi2-core-2.54.1",
+      "pname": "at-spi2-core",
+      "rev": "a79cfe0ebd24952b580b1cf08cd906354996d547",
+      "rev_count": 750629,
+      "rev_date": "2025-02-08T13:21:17Z",
+      "scrape_date": "2025-02-09T05:15:18Z",
+      "stabilities": [
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "2.54.1",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "dev": "/nix/store/0clz8as79c3knvxh7pkbgbcx7s24l6n6-at-spi2-core-2.54.1-dev",
+        "out": "/nix/store/wlfydx6ijdpdlw33kpwmg20wyfkqjwa0-at-spi2-core-2.54.1"
+      },
+      "system": "x86_64-darwin",
+      "group": "accessibility",
+      "priority": 5
+    },
+    {
+      "attr_path": "at-spi2-core",
+      "broken": false,
+      "derivation": "/nix/store/gc5y67qmfp261qbpy9i5ahamkkyrjna3-at-spi2-core-2.54.1.drv",
+      "description": "Assistive Technology Service Provider Interface protocol definitions and daemon for D-Bus",
+      "install_id": "at-spi2-core",
+      "license": "LGPL-2.1-or-later",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=a79cfe0ebd24952b580b1cf08cd906354996d547",
+      "name": "at-spi2-core-2.54.1",
+      "pname": "at-spi2-core",
+      "rev": "a79cfe0ebd24952b580b1cf08cd906354996d547",
+      "rev_count": 750629,
+      "rev_date": "2025-02-08T13:21:17Z",
+      "scrape_date": "2025-02-09T05:15:18Z",
+      "stabilities": [
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "2.54.1",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "debug": "/nix/store/ck5c75gavm80cyh9vq7gvdafr515bsj9-at-spi2-core-2.54.1-debug",
+        "dev": "/nix/store/j9rppcgghyfdfd4hhl3sdrfqk4f8zlyv-at-spi2-core-2.54.1-dev",
+        "out": "/nix/store/7mqr7v28fgxwfqbdcw91qq9qlqvl63hx-at-spi2-core-2.54.1"
+      },
+      "system": "x86_64-linux",
+      "group": "accessibility",
+      "priority": 5
+    },
     {
       "attr_path": "alsa-lib",
       "broken": false,
@@ -792,6 +958,66 @@
       "priority": 5
     },
     {
+      "attr_path": "libappindicator",
+      "broken": false,
+      "derivation": "/nix/store/qklc115x4sjwy8l5vdlky4iba62j2h4g-libappindicator-gtk3-12.10.1+20.10.20200706.1.drv",
+      "description": "Library to allow applications to export a menu into the Unity Menu bar",
+      "install_id": "libappindicator",
+      "license": "[ LGPL-2.1, LGPL-3.0 ]",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=a79cfe0ebd24952b580b1cf08cd906354996d547",
+      "name": "libappindicator-gtk3-12.10.1+20.10.20200706.1",
+      "pname": "libappindicator",
+      "rev": "a79cfe0ebd24952b580b1cf08cd906354996d547",
+      "rev_count": 750629,
+      "rev_date": "2025-02-08T13:21:17Z",
+      "scrape_date": "2025-02-09T05:15:18Z",
+      "stabilities": [
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "gtk3-12.10.1+20.10.20200706.1",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "dev": "/nix/store/6dv1n7f9bh732vg619pijpm19z2mjhvz-libappindicator-gtk3-12.10.1+20.10.20200706.1-dev",
+        "out": "/nix/store/2brx3jlij01wggjsfgy03sx9ybh5cqa8-libappindicator-gtk3-12.10.1+20.10.20200706.1"
+      },
+      "system": "aarch64-linux",
+      "group": "gui",
+      "priority": 5
+    },
+    {
+      "attr_path": "libappindicator",
+      "broken": false,
+      "derivation": "/nix/store/0hwvhcsy1a0fsqhxijl5cnwavm5faw1m-libappindicator-gtk3-12.10.1+20.10.20200706.1.drv",
+      "description": "Library to allow applications to export a menu into the Unity Menu bar",
+      "install_id": "libappindicator",
+      "license": "[ LGPL-2.1, LGPL-3.0 ]",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=a79cfe0ebd24952b580b1cf08cd906354996d547",
+      "name": "libappindicator-gtk3-12.10.1+20.10.20200706.1",
+      "pname": "libappindicator",
+      "rev": "a79cfe0ebd24952b580b1cf08cd906354996d547",
+      "rev_count": 750629,
+      "rev_date": "2025-02-08T13:21:17Z",
+      "scrape_date": "2025-02-09T05:15:18Z",
+      "stabilities": [
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "gtk3-12.10.1+20.10.20200706.1",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "dev": "/nix/store/zz0lrkpwl7b6rnj3pp8gd3n818l2a6h5-libappindicator-gtk3-12.10.1+20.10.20200706.1-dev",
+        "out": "/nix/store/j2r6gdgj0z1ap8l7j6b2861pjm0a21zk-libappindicator-gtk3-12.10.1+20.10.20200706.1"
+      },
+      "system": "x86_64-linux",
+      "group": "gui",
+      "priority": 5
+    },
+    {
       "attr_path": "libdrm",
       "broken": false,
       "derivation": "/nix/store/cjq6n980dyq1l0z6zmqx3d5042588yrj-libdrm-2.4.124.drv",
@@ -1292,6 +1518,324 @@
       "priority": 5
     },
     {
+      "attr_path": "libsecret",
+      "broken": false,
+      "derivation": "/nix/store/2f2p82nsqcjqnx0f8ykjiasdnx57xx54-libsecret-0.21.6.drv",
+      "description": "Library for storing and retrieving passwords and other secrets",
+      "install_id": "libsecret",
+      "license": "LGPL-2.1-or-later",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=a79cfe0ebd24952b580b1cf08cd906354996d547",
+      "name": "libsecret-0.21.6",
+      "pname": "libsecret",
+      "rev": "a79cfe0ebd24952b580b1cf08cd906354996d547",
+      "rev_count": 750629,
+      "rev_date": "2025-02-08T13:21:17Z",
+      "scrape_date": "2025-02-09T05:15:18Z",
+      "stabilities": [
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "0.21.6",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "dev": "/nix/store/7l5nlmasibkk9v2fmkpavlvq3q49wgvc-libsecret-0.21.6-dev",
+        "devdoc": "/nix/store/dfnf9wklnfqkx1sdvmr1dw06qk68bv0x-libsecret-0.21.6-devdoc",
+        "out": "/nix/store/3bwrh12q5vczzsrvh12p6gmrn256vak2-libsecret-0.21.6"
+      },
+      "system": "aarch64-darwin",
+      "group": "security",
+      "priority": 5
+    },
+    {
+      "attr_path": "libsecret",
+      "broken": false,
+      "derivation": "/nix/store/prk0jiaph8khv1y4q91vj4y7cs33a55s-libsecret-0.21.6.drv",
+      "description": "Library for storing and retrieving passwords and other secrets",
+      "install_id": "libsecret",
+      "license": "LGPL-2.1-or-later",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=a79cfe0ebd24952b580b1cf08cd906354996d547",
+      "name": "libsecret-0.21.6",
+      "pname": "libsecret",
+      "rev": "a79cfe0ebd24952b580b1cf08cd906354996d547",
+      "rev_count": 750629,
+      "rev_date": "2025-02-08T13:21:17Z",
+      "scrape_date": "2025-02-09T05:15:18Z",
+      "stabilities": [
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "0.21.6",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "debug": "/nix/store/cqq4j93vzw0hpir9xd7z91qfd5k4v1dw-libsecret-0.21.6-debug",
+        "dev": "/nix/store/hcpdljy0kaks80rgpwk5rvx7qh9rx9q4-libsecret-0.21.6-dev",
+        "devdoc": "/nix/store/qrncryyg4hyw9n47mb6m05z965gd4b17-libsecret-0.21.6-devdoc",
+        "out": "/nix/store/s078cndb4h5plqiin0h6x19l65n72s89-libsecret-0.21.6"
+      },
+      "system": "aarch64-linux",
+      "group": "security",
+      "priority": 5
+    },
+    {
+      "attr_path": "libsecret",
+      "broken": false,
+      "derivation": "/nix/store/6ha14zr8ks2y698l64gzgfgjs2cpnri8-libsecret-0.21.6.drv",
+      "description": "Library for storing and retrieving passwords and other secrets",
+      "install_id": "libsecret",
+      "license": "LGPL-2.1-or-later",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=a79cfe0ebd24952b580b1cf08cd906354996d547",
+      "name": "libsecret-0.21.6",
+      "pname": "libsecret",
+      "rev": "a79cfe0ebd24952b580b1cf08cd906354996d547",
+      "rev_count": 750629,
+      "rev_date": "2025-02-08T13:21:17Z",
+      "scrape_date": "2025-02-09T05:15:18Z",
+      "stabilities": [
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "0.21.6",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "dev": "/nix/store/8ahqwj83gd7cva32vm8b1m3xjibpq66q-libsecret-0.21.6-dev",
+        "devdoc": "/nix/store/0ybcrsiz73c6a791hbs43w34xcx3cmcy-libsecret-0.21.6-devdoc",
+        "out": "/nix/store/kgkn5wkhg08smrd5i8hqhhdi0mxm5lyh-libsecret-0.21.6"
+      },
+      "system": "x86_64-darwin",
+      "group": "security",
+      "priority": 5
+    },
+    {
+      "attr_path": "libsecret",
+      "broken": false,
+      "derivation": "/nix/store/nlnvr8brpf392rhsf5y7y494zpvbyswn-libsecret-0.21.6.drv",
+      "description": "Library for storing and retrieving passwords and other secrets",
+      "install_id": "libsecret",
+      "license": "LGPL-2.1-or-later",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=a79cfe0ebd24952b580b1cf08cd906354996d547",
+      "name": "libsecret-0.21.6",
+      "pname": "libsecret",
+      "rev": "a79cfe0ebd24952b580b1cf08cd906354996d547",
+      "rev_count": 750629,
+      "rev_date": "2025-02-08T13:21:17Z",
+      "scrape_date": "2025-02-09T05:15:18Z",
+      "stabilities": [
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "0.21.6",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "debug": "/nix/store/1953h75cgm2rnphh1mv8v5xnj8anyd0d-libsecret-0.21.6-debug",
+        "dev": "/nix/store/jz91zv78j1z0iw85w9g3kkzxwq65xzd8-libsecret-0.21.6-dev",
+        "devdoc": "/nix/store/yb2nf6z0ivzbsyqg8vh8inp0yybwr8mc-libsecret-0.21.6-devdoc",
+        "out": "/nix/store/4yk90pxlzcv4dqfza87mzpmfbnpw0z1j-libsecret-0.21.6"
+      },
+      "system": "x86_64-linux",
+      "group": "security",
+      "priority": 5
+    },
+    {
+      "attr_path": "libuuid",
+      "broken": false,
+      "derivation": "/nix/store/vqidwd5iqm0ld5w6cxr79lh4wkssdfqi-util-linux-minimal-2.39.4.drv",
+      "description": "Set of system utilities for Linux",
+      "install_id": "libuuid",
+      "license": "[ GPL-2.0-only, GPL-2.0-or-later, GPL-3.0-or-later, LGPL-2.1-or-later, BSD-3-Clause, BSD-4-Clause-UC, Public Domain ]",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=a79cfe0ebd24952b580b1cf08cd906354996d547",
+      "name": "util-linux-minimal-2.39.4",
+      "pname": "libuuid",
+      "rev": "a79cfe0ebd24952b580b1cf08cd906354996d547",
+      "rev_count": 750629,
+      "rev_date": "2025-02-08T13:21:17Z",
+      "scrape_date": "2025-02-09T05:15:18Z",
+      "stabilities": [
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "util-linux-minimal-2.39.4",
+      "outputs_to_install": [
+        "bin",
+        "man"
+      ],
+      "outputs": {
+        "bin": "/nix/store/6jv1cwm15l607b35zpwsaldqwh5wfhnm-util-linux-minimal-2.39.4-bin",
+        "debug": "/nix/store/ihmfmffkyji1v194jrdpszyfwygiqga0-util-linux-minimal-2.39.4-debug",
+        "dev": "/nix/store/yfra0ybngikggk8ix2w8g80qmpv69lw4-util-linux-minimal-2.39.4-dev",
+        "lib": "/nix/store/z3fk8cff3vk9hcdninvghi0dgb9clxj2-util-linux-minimal-2.39.4-lib",
+        "login": "/nix/store/kwx8mrs0g5pk8jvs5n6s7idqdw2daqsl-util-linux-minimal-2.39.4-login",
+        "man": "/nix/store/pwcxil8bhwywd4hvd4927xg97yfyhsyf-util-linux-minimal-2.39.4-man",
+        "mount": "/nix/store/65477m9g0272azjpraq0cz7l3mmwyjpg-util-linux-minimal-2.39.4-mount",
+        "out": "/nix/store/kfv4igqn7nabmmnyf48nljasdfivyw6x-util-linux-minimal-2.39.4",
+        "swap": "/nix/store/skplb0rs9b8mrl48cgsyzkpankj6bw1m-util-linux-minimal-2.39.4-swap"
+      },
+      "system": "aarch64-linux",
+      "group": "system",
+      "priority": 5
+    },
+    {
+      "attr_path": "libuuid",
+      "broken": false,
+      "derivation": "/nix/store/n37gwvyps82xazlarhd52g24abq1w52g-util-linux-minimal-2.39.4.drv",
+      "description": "Set of system utilities for Linux",
+      "install_id": "libuuid",
+      "license": "[ GPL-2.0-only, GPL-2.0-or-later, GPL-3.0-or-later, LGPL-2.1-or-later, BSD-3-Clause, BSD-4-Clause-UC, Public Domain ]",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=a79cfe0ebd24952b580b1cf08cd906354996d547",
+      "name": "util-linux-minimal-2.39.4",
+      "pname": "libuuid",
+      "rev": "a79cfe0ebd24952b580b1cf08cd906354996d547",
+      "rev_count": 750629,
+      "rev_date": "2025-02-08T13:21:17Z",
+      "scrape_date": "2025-02-09T05:15:18Z",
+      "stabilities": [
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "util-linux-minimal-2.39.4",
+      "outputs_to_install": [
+        "bin",
+        "man"
+      ],
+      "outputs": {
+        "bin": "/nix/store/gdgpwhjscyy33zpyaaj97dnxkqqcdgkj-util-linux-minimal-2.39.4-bin",
+        "debug": "/nix/store/9xplp3jncsdqnyx9sb0amhfni3hq4skg-util-linux-minimal-2.39.4-debug",
+        "dev": "/nix/store/cxmgrlh0d3y27jzpdgf4iih7njbqsn1a-util-linux-minimal-2.39.4-dev",
+        "lib": "/nix/store/8h9qgd6yp7ld34q6vh1waz5df0d7z3s2-util-linux-minimal-2.39.4-lib",
+        "login": "/nix/store/d0m7y5qrgvmnwwyx3qz3ff3y7dybsq5y-util-linux-minimal-2.39.4-login",
+        "man": "/nix/store/liqnj54n2hzjafr6mkyghalb6j9mas1v-util-linux-minimal-2.39.4-man",
+        "mount": "/nix/store/956k3cv230x3066yqlcv7q74xszq6x82-util-linux-minimal-2.39.4-mount",
+        "out": "/nix/store/r8hmcy8grljxrx465qwn83fd6cn528n0-util-linux-minimal-2.39.4",
+        "swap": "/nix/store/nlhn3x342xxzrnxicnsvpahicraf98j9-util-linux-minimal-2.39.4-swap"
+      },
+      "system": "x86_64-linux",
+      "group": "system",
+      "priority": 5
+    },
+    {
+      "attr_path": "xdg-utils",
+      "broken": false,
+      "derivation": "/nix/store/kbwkj0pd7kqh99hndwcmyv0161npfylj-xdg-utils-1.2.1.drv",
+      "description": "Set of command line tools that assist applications with a variety of desktop integration tasks",
+      "install_id": "xdg-utils",
+      "license": "MIT",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=a79cfe0ebd24952b580b1cf08cd906354996d547",
+      "name": "xdg-utils-1.2.1",
+      "pname": "xdg-utils",
+      "rev": "a79cfe0ebd24952b580b1cf08cd906354996d547",
+      "rev_count": 750629,
+      "rev_date": "2025-02-08T13:21:17Z",
+      "scrape_date": "2025-02-09T05:15:18Z",
+      "stabilities": [
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "1.2.1",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "out": "/nix/store/4925rja46yifi4qzc7q5kgqyc13qlsyq-xdg-utils-1.2.1"
+      },
+      "system": "aarch64-darwin",
+      "group": "tools",
+      "priority": 5
+    },
+    {
+      "attr_path": "xdg-utils",
+      "broken": false,
+      "derivation": "/nix/store/5cwsgvpj5wphf76z262x0r160abmm86k-xdg-utils-1.2.1.drv",
+      "description": "Set of command line tools that assist applications with a variety of desktop integration tasks",
+      "install_id": "xdg-utils",
+      "license": "MIT",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=a79cfe0ebd24952b580b1cf08cd906354996d547",
+      "name": "xdg-utils-1.2.1",
+      "pname": "xdg-utils",
+      "rev": "a79cfe0ebd24952b580b1cf08cd906354996d547",
+      "rev_count": 750629,
+      "rev_date": "2025-02-08T13:21:17Z",
+      "scrape_date": "2025-02-09T05:15:18Z",
+      "stabilities": [
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "1.2.1",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "out": "/nix/store/qxd3jjdmb7sn8jgqzifxkflz59zqhyyv-xdg-utils-1.2.1"
+      },
+      "system": "aarch64-linux",
+      "group": "tools",
+      "priority": 5
+    },
+    {
+      "attr_path": "xdg-utils",
+      "broken": false,
+      "derivation": "/nix/store/b4zf7kiac00rbqjx3n4amyx30xwcwxgw-xdg-utils-1.2.1.drv",
+      "description": "Set of command line tools that assist applications with a variety of desktop integration tasks",
+      "install_id": "xdg-utils",
+      "license": "MIT",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=a79cfe0ebd24952b580b1cf08cd906354996d547",
+      "name": "xdg-utils-1.2.1",
+      "pname": "xdg-utils",
+      "rev": "a79cfe0ebd24952b580b1cf08cd906354996d547",
+      "rev_count": 750629,
+      "rev_date": "2025-02-08T13:21:17Z",
+      "scrape_date": "2025-02-09T05:15:18Z",
+      "stabilities": [
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "1.2.1",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "out": "/nix/store/10p8akmklij2h7b2vw8hg03c9srlwxp0-xdg-utils-1.2.1"
+      },
+      "system": "x86_64-darwin",
+      "group": "tools",
+      "priority": 5
+    },
+    {
+      "attr_path": "xdg-utils",
+      "broken": false,
+      "derivation": "/nix/store/mgp6xhjm5xmqpsbdzpmvpk9gsad2h3kb-xdg-utils-1.2.1.drv",
+      "description": "Set of command line tools that assist applications with a variety of desktop integration tasks",
+      "install_id": "xdg-utils",
+      "license": "MIT",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=a79cfe0ebd24952b580b1cf08cd906354996d547",
+      "name": "xdg-utils-1.2.1",
+      "pname": "xdg-utils",
+      "rev": "a79cfe0ebd24952b580b1cf08cd906354996d547",
+      "rev_count": 750629,
+      "rev_date": "2025-02-08T13:21:17Z",
+      "scrape_date": "2025-02-09T05:15:18Z",
+      "stabilities": [
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "1.2.1",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "out": "/nix/store/bnj4hai23gli1k2a7rsk3m6wl80pnvy7-xdg-utils-1.2.1"
+      },
+      "system": "x86_64-linux",
+      "group": "tools",
+      "priority": 5
+    },
+    {
       "attr_path": "dpkg",
       "broken": false,
       "derivation": "/nix/store/06g0h2k4hgdlqxjq9sravxc18x76lb1h-dpkg-1.22.11.drv",
@@ -1533,6 +2077,114 @@
       },
       "system": "x86_64-linux",
       "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "xorg.libXScrnSaver",
+      "broken": false,
+      "derivation": "/nix/store/qi52ld6psk0y6p3k4xz1wjd6dknizi3q-libXScrnSaver-1.2.4.drv",
+      "install_id": "libxscrnsaver",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=a79cfe0ebd24952b580b1cf08cd906354996d547",
+      "name": "libXScrnSaver-1.2.4",
+      "pname": "libXScrnSaver",
+      "rev": "a79cfe0ebd24952b580b1cf08cd906354996d547",
+      "rev_count": 750629,
+      "rev_date": "2025-02-08T13:21:17Z",
+      "scrape_date": "2025-02-09T05:15:18Z",
+      "stabilities": [
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "1.2.4",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "out": "/nix/store/ih5silh649mqr2g09n8acg5mda6nbq9l-libXScrnSaver-1.2.4"
+      },
+      "system": "aarch64-linux",
+      "group": "x11",
+      "priority": 5
+    },
+    {
+      "attr_path": "xorg.libXScrnSaver",
+      "broken": false,
+      "derivation": "/nix/store/r881pvridvmbykskpzkfsn4a43m91wm1-libXScrnSaver-1.2.4.drv",
+      "install_id": "libxscrnsaver",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=a79cfe0ebd24952b580b1cf08cd906354996d547",
+      "name": "libXScrnSaver-1.2.4",
+      "pname": "libXScrnSaver",
+      "rev": "a79cfe0ebd24952b580b1cf08cd906354996d547",
+      "rev_count": 750629,
+      "rev_date": "2025-02-08T13:21:17Z",
+      "scrape_date": "2025-02-09T05:15:18Z",
+      "stabilities": [
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "1.2.4",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "out": "/nix/store/8zcsk1sj4qgc81j7b9ydan1h7kkagclq-libXScrnSaver-1.2.4"
+      },
+      "system": "x86_64-linux",
+      "group": "x11",
+      "priority": 5
+    },
+    {
+      "attr_path": "xorg.libXtst",
+      "broken": false,
+      "derivation": "/nix/store/2wxah0736b7z5wl3vrfyb4b3pyw0dlkj-libXtst-1.2.5.drv",
+      "install_id": "libxtst",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=a79cfe0ebd24952b580b1cf08cd906354996d547",
+      "name": "libXtst-1.2.5",
+      "pname": "libXtst",
+      "rev": "a79cfe0ebd24952b580b1cf08cd906354996d547",
+      "rev_count": 750629,
+      "rev_date": "2025-02-08T13:21:17Z",
+      "scrape_date": "2025-02-09T05:15:18Z",
+      "stabilities": [
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "1.2.5",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "out": "/nix/store/zb5mrf9xnzf0gi9p6ayncf98c13l5a1n-libXtst-1.2.5"
+      },
+      "system": "aarch64-linux",
+      "group": "x11",
+      "priority": 5
+    },
+    {
+      "attr_path": "xorg.libXtst",
+      "broken": false,
+      "derivation": "/nix/store/wnpgwd80ls9wmmnk15i9zv7pa55lc3rk-libXtst-1.2.5.drv",
+      "install_id": "libxtst",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=a79cfe0ebd24952b580b1cf08cd906354996d547",
+      "name": "libXtst-1.2.5",
+      "pname": "libXtst",
+      "rev": "a79cfe0ebd24952b580b1cf08cd906354996d547",
+      "rev_count": 750629,
+      "rev_date": "2025-02-08T13:21:17Z",
+      "scrape_date": "2025-02-09T05:15:18Z",
+      "stabilities": [
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "1.2.5",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "out": "/nix/store/radaww35hcvzwhhdz4n9wa31x9234a7a-libXtst-1.2.5"
+      },
+      "system": "x86_64-linux",
+      "group": "x11",
       "priority": 5
     }
   ]
