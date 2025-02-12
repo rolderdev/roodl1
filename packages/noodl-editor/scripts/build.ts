@@ -1,7 +1,11 @@
 import { execSync } from "node:child_process";
 
 import { valueToBoolean } from "../../../scripts/helper";
-import { type BuildTarget, getDistPlatform } from "./platform/build-platforms";
+import {
+	type BuildTarget,
+	getDistPlatform,
+	isGitHubActions,
+} from "./platform/build-platforms";
 
 (async () => {
 	// Inputs
@@ -45,7 +49,7 @@ import { type BuildTarget, getDistPlatform } from "./platform/build-platforms";
 	const platformName = getDistPlatform(target.platform);
 	const args = [`--${platformName}`, `--${target.arch}`].join(" ");
 
-	const USE_SYSTEM_FPM = true;
+	const USE_SYSTEM_FPM = !isGitHubActions();
 
 	console.log(`--- Run: 'npx electron-builder ${args}' ...`);
 	execSync(`npx electron-builder ${args}`, {
