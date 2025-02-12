@@ -45,14 +45,17 @@ import { type BuildTarget, getDistPlatform } from "./platform/build-platforms";
 	const platformName = getDistPlatform(target.platform);
 	const args = [`--${platformName}`, `--${target.arch}`].join(" ");
 
+	const USE_SYSTEM_FPM = true;
+
 	console.log(`--- Run: 'npx electron-builder ${args}' ...`);
 	execSync(`npx electron-builder ${args}`, {
 		stdio: [0, 1, 2],
 		env: Object.assign(
 			DISABLE_SIGNING
-				? {}
+				? { USE_SYSTEM_FPM }
 				: {
 						CSC_NAME,
+						USE_SYSTEM_FPM,
 					},
 			process.env,
 		),
