@@ -18,39 +18,30 @@ version = 1
 nodejs.pkg-path = "nodejs"
 nodejs.version = "18.18.2"
 fpm.pkg-path = "fpm"
-
-# glib.pkg-path = "glib"
-# glib.pkg-group = "gui"
-
-# nss.pkg-path = "nss"
-# nss.pkg-group = "gui"
-
-# dbus.pkg-path = "dbus"
-# dbus.pkg-group = "gui"
-
-# atk.pkg-path = "atk"
-# atk.pkg-group = "gui"
-
-# cups.pkg-path = "cups"
-# cups.pkg-group = "gui"
-
-# libdrm.pkg-path = "libdrm"
-# libdrm.systems = ["aarch64-linux", "x86_64-linux"]
-# libdrm.pkg-group = "gui"
-
-# libgbm.pkg-path = "libgbm"
-# libgbm.systems = ["aarch64-linux", "x86_64-linux"]
-# libgbm.pkg-group = "gui"
-
-# gtk3.pkg-path = "gtk3"
-# gtk3.pkg-group = "gui"
-
-# libxkbcommon.pkg-path = "libxkbcommon"
-# libxkbcommon.pkg-group = "gui"
-
-# alsa-lib.pkg-path = "alsa-lib"
-# alsa-lib.systems = ["aarch64-linux", "x86_64-linux"]
-# alsa-lib.pkg-group = "audio"
+# dev dependencies
+glib.pkg-path = "glib"
+glib.pkg-group = "gui"
+nss.pkg-path = "nss"
+nss.pkg-group = "gui"
+dbus.pkg-path = "dbus"
+dbus.pkg-group = "gui"
+atk.pkg-path = "atk"
+atk.pkg-group = "gui"
+cups.pkg-path = "cups"
+cups.pkg-group = "gui"
+libdrm.pkg-path = "libdrm"
+libdrm.systems = ["aarch64-linux", "x86_64-linux"]
+libdrm.pkg-group = "gui"
+libgbm.pkg-path = "libgbm"
+libgbm.systems = ["aarch64-linux", "x86_64-linux"]
+libgbm.pkg-group = "gui"
+gtk3.pkg-path = "gtk3"
+gtk3.pkg-group = "gui"
+libxkbcommon.pkg-path = "libxkbcommon"
+libxkbcommon.pkg-group = "gui"
+alsa-lib.pkg-path = "alsa-lib"
+alsa-lib.systems = ["aarch64-linux", "x86_64-linux"]
+alsa-lib.pkg-group = "audio"
 
 # dpkg.pkg-path = "dpkg"
 # libnotify.pkg-path = "libnotify"
