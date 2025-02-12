@@ -1,5 +1,5 @@
-import { execSync } from "child_process";
-import path from "path";
+import { execSync } from "node:child_process";
+import path from "node:path";
 
 const CWD = path.join(__dirname, "..");
 const LOCAL_GIT_DIRECTORY = path.join(
@@ -17,10 +17,10 @@ const LOCAL_GIT_TRAMPOLINE_DIRECTORY = path.join(
 );
 
 console.log("---");
-console.log(`> CWD: `, CWD);
-console.log(`> LOCAL_GIT_DIRECTORY: `, LOCAL_GIT_DIRECTORY);
+console.log("> CWD: ", CWD);
+console.log("> LOCAL_GIT_DIRECTORY: ", LOCAL_GIT_DIRECTORY);
 console.log(
-	`> LOCAL_GIT_TRAMPOLINE_DIRECTORY: `,
+	"> LOCAL_GIT_TRAMPOLINE_DIRECTORY: ",
 	LOCAL_GIT_TRAMPOLINE_DIRECTORY,
 );
 console.log("---");

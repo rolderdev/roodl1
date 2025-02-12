@@ -1,5 +1,5 @@
-import { execSync } from "child_process";
-import path from "path";
+import { execSync } from "node:child_process";
+import path from "node:path";
 
 // import { gitSimpleDownload } from "./git/download-git";
 
@@ -26,8 +26,8 @@ import { getCurrentPlatform } from "../helper";
 	);
 
 	const [platform, arch] = TARGET_PLATFORM.trim().split("-");
-	// @ts-expect-error TODO: Add validation on the input.
-	const target: BuildTarget = { platform, arch };
+	//  TODO: Add validation on the input.
+	// const target: BuildTarget = { platform, arch };
 
 	// Debug Configuration
 	console.log("--- Configuration");
@@ -77,7 +77,7 @@ import { getCurrentPlatform } from "../helper";
 	console.log("--- Run 'npm install' ...");
 
 	if (platform === "darwin") {
-		execSync(`npm install electron-notarize`, {
+		execSync("npm install electron-notarize", {
 			stdio: "inherit",
 			env: process.env,
 		});

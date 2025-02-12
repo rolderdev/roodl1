@@ -1,6 +1,6 @@
-import { exec } from "child_process";
-import fs from "fs";
-import path from "path";
+import { exec } from "node:child_process";
+import fs from "node:fs";
+import path from "node:path";
 
 import { ConsoleColor, attachStdio } from "./utils/process";
 
@@ -21,10 +21,10 @@ const LOCAL_GIT_TRAMPOLINE_DIRECTORY = path.join(
 
 // Print variables for easy debugging
 console.log("---");
-console.log(`> CWD: `, CWD);
-console.log(`> LOCAL_GIT_DIRECTORY: `, LOCAL_GIT_DIRECTORY);
+console.log("> CWD: ", CWD);
+console.log("> LOCAL_GIT_DIRECTORY: ", LOCAL_GIT_DIRECTORY);
 console.log(
-	`> LOCAL_GIT_TRAMPOLINE_DIRECTORY: `,
+	"> LOCAL_GIT_TRAMPOLINE_DIRECTORY: ",
 	LOCAL_GIT_TRAMPOLINE_DIRECTORY,
 );
 console.log("---");
