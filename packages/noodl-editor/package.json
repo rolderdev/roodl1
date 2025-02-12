@@ -5,7 +5,7 @@
 	"author": "Roodl <mail@rolder.ru>",
 	"homepage": "https://rolder.ru",
 	"version": "1.2.0",
-	"main": "src/main/main.js",
+	"main": "src/main/main.bundle.js",
 	"scripts": {
 		"build": "npx ts-node -P ./tsconfig.build.json ./scripts/build.ts",
 		"start": "webpack-dev-server --config=webpackconfigs/webpack.renderer.dev.js",
@@ -26,19 +26,13 @@
 				"NSCameraUsageDescription": "Allow Roodl apps that you create and run to access the camera?"
 			}
 		},
-		"win": {
-			"target": "nsis"
-		},
-		"nsis": {
-			"guid": "roodl.net.roodl"
-		},
+		"win": { "target": "nsis" },
+		"nsis": { "guid": "roodl.net.roodl" },
 		"linux": {
-			"target": "deb"
+			"target": ["AppImage", "deb"],
+			"category": "Development"
 		},
-		"protocols": {
-			"name": "roodl",
-			"schemes": ["roodl"]
-		},
+		"protocols": { "name": "roodl", "schemes": ["roodl"] },
 		"npmRebuild": false,
 		"files": [
 			"*.js",
@@ -132,11 +126,6 @@
 		"webpack-dev-server": "^4.11.1",
 		"webpack-merge": "^5.8.0"
 	},
-	"engines": {
-		"npm": ">=6.0.0",
-		"node": ">=16.0.0"
-	},
-	"optionalDependencies": {
-		"dmg-license": "^1.0.11"
-	}
+	"engines": { "npm": ">=6.0.0", "node": ">=16.0.0" },
+	"optionalDependencies": { "dmg-license": "^1.0.11" }
 }

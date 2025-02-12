@@ -17,70 +17,77 @@ version = 1
 [install]
 nodejs.pkg-path = "nodejs"
 nodejs.version = "18.18.2"
-nodejs.pkg-group = "node"
-
-glib.pkg-path = "glib"
-glib.pkg-group = "gui"
-
-nss.pkg-path = "nss"
-nss.pkg-group = "gui"
-
-dbus.pkg-path = "dbus"
-dbus.pkg-group = "gui"
-
-atk.pkg-path = "atk"
-atk.pkg-group = "gui"
-
-cups.pkg-path = "cups"
-cups.pkg-group = "gui"
-
-libdrm.pkg-path = "libdrm"
-libdrm.systems = ["aarch64-linux", "x86_64-linux"]
-libdrm.pkg-group = "gui"
-
-libgbm.pkg-path = "libgbm"
-libgbm.systems = ["aarch64-linux", "x86_64-linux"]
-libgbm.pkg-group = "gui"
-
-gtk3.pkg-path = "gtk3"
-gtk3.pkg-group = "gui"
-
-libxkbcommon.pkg-path = "libxkbcommon"
-libxkbcommon.pkg-group = "gui"
-
-alsa-lib.pkg-path = "alsa-lib"
-alsa-lib.systems = ["aarch64-linux", "x86_64-linux"]
-alsa-lib.pkg-group = "audio"
-
-dpkg.pkg-path = "dpkg"
-libnotify.pkg-path = "libnotify"
-
-libxtst.pkg-path = "xorg.libXtst"                   # это аналог libxtst6
-libxtst.systems = ["aarch64-linux", "x86_64-linux"]
-libxtst.pkg-group = "x11"
-
-xdg-utils.pkg-path = "xdg-utils"
-xdg-utils.pkg-group = "tools"
-
-at-spi2-core.pkg-path = "at-spi2-core"   # это аналог libatspi2.0-0
-at-spi2-core.pkg-group = "accessibility"
-
-libuuid.pkg-path = "libuuid"                        # это аналог libuuid1
-libuuid.systems = ["aarch64-linux", "x86_64-linux"]
-libuuid.pkg-group = "system"
-
-libsecret.pkg-path = "libsecret" # это аналог libsecret-1-0
-libsecret.pkg-group = "security"
-
-libappindicator.pkg-path = "libappindicator"                # это аналог libappindicator3-1
-libappindicator.systems = ["aarch64-linux", "x86_64-linux"]
-libappindicator.pkg-group = "gui"
-
-libxscrnsaver.pkg-path = "xorg.libXScrnSaver"             # это аналог libxss1
-libxscrnsaver.systems = ["aarch64-linux", "x86_64-linux"]
-libxscrnsaver.pkg-group = "x11"
-ruby.pkg-path = "ruby"
 fpm.pkg-path = "fpm"
+
+# glib.pkg-path = "glib"
+# glib.pkg-group = "gui"
+
+# nss.pkg-path = "nss"
+# nss.pkg-group = "gui"
+
+# dbus.pkg-path = "dbus"
+# dbus.pkg-group = "gui"
+
+# atk.pkg-path = "atk"
+# atk.pkg-group = "gui"
+
+# cups.pkg-path = "cups"
+# cups.pkg-group = "gui"
+
+# libdrm.pkg-path = "libdrm"
+# libdrm.systems = ["aarch64-linux", "x86_64-linux"]
+# libdrm.pkg-group = "gui"
+
+# libgbm.pkg-path = "libgbm"
+# libgbm.systems = ["aarch64-linux", "x86_64-linux"]
+# libgbm.pkg-group = "gui"
+
+# gtk3.pkg-path = "gtk3"
+# gtk3.pkg-group = "gui"
+
+# libxkbcommon.pkg-path = "libxkbcommon"
+# libxkbcommon.pkg-group = "gui"
+
+# alsa-lib.pkg-path = "alsa-lib"
+# alsa-lib.systems = ["aarch64-linux", "x86_64-linux"]
+# alsa-lib.pkg-group = "audio"
+
+# dpkg.pkg-path = "dpkg"
+# libnotify.pkg-path = "libnotify"
+
+# libxtst.pkg-path = "xorg.libXtst"                   # это аналог libxtst6
+# libxtst.systems = ["aarch64-linux", "x86_64-linux"]
+# libxtst.pkg-group = "x11"
+
+# xdg-utils.pkg-path = "xdg-utils"
+# xdg-utils.pkg-group = "tools"
+
+# at-spi2-core.pkg-path = "at-spi2-core"   # это аналог libatspi2.0-0
+# at-spi2-core.pkg-group = "accessibility"
+
+# libuuid.pkg-path = "libuuid"                        # это аналог libuuid1
+# libuuid.systems = ["aarch64-linux", "x86_64-linux"]
+# libuuid.pkg-group = "system"
+
+# libsecret.pkg-path = "libsecret" # это аналог libsecret-1-0
+# libsecret.pkg-group = "security"
+
+# libappindicator.pkg-path = "libappindicator"                # это аналог libappindicator3-1
+# libappindicator.systems = ["aarch64-linux", "x86_64-linux"]
+# libappindicator.pkg-group = "gui"
+
+# libxscrnsaver.pkg-path = "xorg.libXScrnSaver"             # это аналог libxss1
+# libxscrnsaver.systems = ["aarch64-linux", "x86_64-linux"]
+# libxscrnsaver.pkg-group = "x11"
+# gcc.pkg-path = "gcc"
+# gnumake.pkg-path = "gnumake"
+# binutils.pkg-path = "binutils"
+# patchelf.pkg-path = "patchelf"
+# fakeroot.pkg-path = "fakeroot"
+# gnutar.pkg-path = "gnutar"
+# zlib.pkg-path = "zlib"
+# xz.pkg-path = "xz"
+# zstd.pkg-path = "zstd"
 
 ## Environment Variables ---------------------------------------------
 ##  ... available for use in the activated environment
