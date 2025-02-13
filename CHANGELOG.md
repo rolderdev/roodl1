@@ -2,7 +2,7 @@
 
 ## 2025-01-13 v1.2.0
 
-[Новость]()
+[Новость](https://docs.rolder.app/#/newspost/agyjxm06oc09hpqd3gsk)
 
 ## 2024-09-26 v1.1.0
 
