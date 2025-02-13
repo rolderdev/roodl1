@@ -1,10 +1,10 @@
+import { platform } from "@noodl/platform";
 import { ipcRenderer } from "electron";
 import React, { useEffect, useState } from "react";
-import { platform } from "@noodl/platform";
 
 import type { ProjectModel } from "@noodl-models/projectmodel";
-import getDocsEndpoint from "@noodl-utils/getDocsEndpoint";
 import { LocalProjectsModel } from "@noodl-utils/LocalProjectsModel";
+import getDocsEndpoint from "@noodl-utils/getDocsEndpoint";
 
 import { Logo, LogoSize } from "@noodl-core-ui/components/common/Logo";
 import { TextButton } from "@noodl-core-ui/components/inputs/TextButton";
@@ -117,9 +117,13 @@ function TopBar({ showSpinner, setShowSpinner }: TopBarProps) {
 					onClick={() => platform.openExternal(getDocsEndpoint())}
 				/>
 				<TextButton
+					label="Rolder Kit Docs"
+					onClick={() => platform.openExternal("https://docs.rolder.app")}
+				/>
+				<TextButton
 					label="Community"
 					onClick={() =>
-						platform.openExternal("https://www.rolder.ru/community")
+						platform.openExternal("https://www.fluxscape.io/community")
 					}
 				/>
 			</HStack>
