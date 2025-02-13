@@ -648,7 +648,8 @@ function createNodeFromReactComponent(def) {
 					ref: (ref) => {
 						this.reactComponentRef = ref
 						// Rolder
-						if (!this.model?.type.includes('rolder-kit.Pdf')) this.boundingBoxObserver.setTarget(ReactDOM.findDOMNode(ref))
+						if (!this.model?.type.includes('rolder-kit.Pdf') && !this.model?.type.includes('rolder-kit.api-v1.Pdf'))
+							this.boundingBoxObserver.setTarget(ReactDOM.findDOMNode(ref))
 					},
 				})
 			},
