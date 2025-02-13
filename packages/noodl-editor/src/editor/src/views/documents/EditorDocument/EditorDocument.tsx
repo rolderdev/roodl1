@@ -1,37 +1,37 @@
-import { useNodeGraphContext } from '@noodl-contexts/NodeGraphContext/NodeGraphContext';
-import { useKeyboardCommands } from '@noodl-hooks/useKeyboardCommands';
-import usePrevious from '@noodl-hooks/usePrevious';
-import { OpenAiStore } from '@noodl-store/AiAssistantStore';
-import { ipcRenderer } from 'electron';
-import React, { useCallback, useEffect, useState } from 'react';
+import { useNodeGraphContext } from '@noodl-contexts/NodeGraphContext/NodeGraphContext'
+import { useKeyboardCommands } from '@noodl-hooks/useKeyboardCommands'
+import usePrevious from '@noodl-hooks/usePrevious'
+import { OpenAiStore } from '@noodl-store/AiAssistantStore'
+import { ipcRenderer } from 'electron'
+import React, { useCallback, useEffect, useState } from 'react'
 
-import { IDocumentProvider } from '@noodl-models/app_registry';
-import { ProjectModel } from '@noodl-models/projectmodel';
-import { SidebarModel } from '@noodl-models/sidebar';
-import { SidebarModelEvent } from '@noodl-models/sidebar/sidebarmodel';
-import { EditorSettings } from '@noodl-utils/editorsettings';
-import { KeyCode, KeyMod } from '@noodl-utils/keyboard/KeyCode';
-import { KeyboardCommand } from '@noodl-utils/keyboardhandler';
+import type { IDocumentProvider } from '@noodl-models/app_registry'
+import { ProjectModel } from '@noodl-models/projectmodel'
+import { SidebarModel } from '@noodl-models/sidebar'
+import { SidebarModelEvent } from '@noodl-models/sidebar/sidebarmodel'
+import { EditorSettings } from '@noodl-utils/editorsettings'
+import { KeyCode, KeyMod } from '@noodl-utils/keyboard/KeyCode'
+import type { KeyboardCommand } from '@noodl-utils/keyboardhandler'
 
-import { Container, ContainerDirection } from '@noodl-core-ui/components/layout/Container';
-import { FrameDivider, FrameDividerOwner } from '@noodl-core-ui/components/layout/FrameDivider';
-import { MenuDialogWidth } from '@noodl-core-ui/components/popups/MenuDialog';
+import { Container, ContainerDirection } from '@noodl-core-ui/components/layout/Container'
+import { FrameDivider, FrameDividerOwner } from '@noodl-core-ui/components/layout/FrameDivider'
+import { MenuDialogWidth } from '@noodl-core-ui/components/popups/MenuDialog'
 
-import { EventDispatcher } from '../../../../../shared/utils/EventDispatcher';
-import Clippy from '../../Clippy/Clippy';
-import { Frame } from '../../common/Frame';
-import { EditorTopbar } from '../../EditorTopbar';
-import { HelpCenter } from '../../HelpCenter';
-import { NodeGraphEditor } from '../../nodegrapheditor';
-import { showContextMenuInPopup } from '../../ShowContextMenuInPopup';
-import { useCanvasView } from './hooks/UseCanvasView';
-import { useCaptureThumbnails } from './hooks/UseCaptureThumbnails';
-import { useImportNodeset } from './hooks/UseImportNodeset';
-import { useRoutes } from './hooks/UseRoutes';
-import { useSetupNodeGraph } from './hooks/UseSetupNodeGraph';
-import { TitleBar } from './titlebar';
+import { EventDispatcher } from '../../../../../shared/utils/EventDispatcher'
+import Clippy from '../../Clippy/Clippy'
+import { EditorTopbar } from '../../EditorTopbar'
+import { HelpCenter } from '../../HelpCenter'
+import { showContextMenuInPopup } from '../../ShowContextMenuInPopup'
+import { Frame } from '../../common/Frame'
+import type { NodeGraphEditor } from '../../nodegrapheditor'
+import { useCanvasView } from './hooks/UseCanvasView'
+import { useCaptureThumbnails } from './hooks/UseCaptureThumbnails'
+import { useImportNodeset } from './hooks/UseImportNodeset'
+import { useRoutes } from './hooks/UseRoutes'
+import { useSetupNodeGraph } from './hooks/UseSetupNodeGraph'
+import { TitleBar } from './titlebar'
 
-type DocumentLayout = 'horizontal' | 'vertical' | 'detachedPreview';
+type DocumentLayout = 'horizontal' | 'vertical' | 'detachedPreview'
 
 function EditorDocument() {
   const [viewerEnabled, setViewerEnabled] = useState(true) // Rolder
@@ -460,111 +460,110 @@ function EditorDocument() {
 }
 
 function ViewComponent({
-  canvasViewInstance,
-  documentLayout,
-  nodeGraphEditorInstance,
-  onSizeUpdated,
-  frameDividerSize
+	canvasViewInstance,
+	documentLayout,
+	nodeGraphEditorInstance,
+	onSizeUpdated,
+	frameDividerSize,
 }: TSFixme) {
-  const [frameBounds, setFrameBounds] = useState(undefined);
+	const [frameBounds, setFrameBounds] = useState(undefined)
 
-  const horizontal = documentLayout === 'horizontal';
-  const totalSize = frameBounds ? (horizontal ? frameBounds.height : frameBounds.width) : undefined;
+	const horizontal = documentLayout === 'horizontal'
+	const totalSize = frameBounds ? (horizontal ? frameBounds.height : frameBounds.width) : undefined
 
-  if (documentLayout === 'detachedPreview') {
-    return <Frame instance={nodeGraphEditorInstance} onResize={(bounds) => nodeGraphEditorInstance.resize(bounds)} />;
-  } else {
-    const firstInstance = horizontal ? canvasViewInstance : nodeGraphEditorInstance;
-    const secondInstance = horizontal ? nodeGraphEditorInstance : canvasViewInstance;
+	if (documentLayout === 'detachedPreview') {
+		return <Frame instance={nodeGraphEditorInstance} onResize={(bounds) => nodeGraphEditorInstance.resize(bounds)} />
+	}
+	const firstInstance = horizontal ? canvasViewInstance : nodeGraphEditorInstance
+	const secondInstance = horizontal ? nodeGraphEditorInstance : canvasViewInstance
 
-    return (
-      <FrameDivider
-        splitOwner={horizontal ? FrameDividerOwner.First : FrameDividerOwner.Second}
-        horizontal={!horizontal}
-        first={<Frame instance={firstInstance} onResize={(bounds) => firstInstance.resize(bounds)} />}
-        second={<Frame instance={secondInstance} onResize={(bounds) => secondInstance.resize(bounds)} />}
-        sizeMin={100}
-        sizeMax={totalSize ? totalSize - 100 : undefined}
-        size={frameDividerSize}
-        onSizeChanged={(size) => {
-          onSizeUpdated(size);
-        }}
-        onBoundsChanged={setFrameBounds}
-      />
-    );
-  }
+	return (
+		<FrameDivider
+			splitOwner={horizontal ? FrameDividerOwner.First : FrameDividerOwner.Second}
+			horizontal={!horizontal}
+			first={<Frame instance={firstInstance} onResize={(bounds) => firstInstance.resize(bounds)} />}
+			second={<Frame instance={secondInstance} onResize={(bounds) => secondInstance.resize(bounds)} />}
+			sizeMin={100}
+			sizeMax={totalSize ? totalSize - 100 : undefined}
+			size={frameDividerSize}
+			onSizeChanged={(size) => {
+				onSizeUpdated(size)
+			}}
+			onBoundsChanged={setFrameBounds}
+		/>
+	)
 }
 
 function createKeyboardCommands(nodeGraph: NodeGraphEditor) {
-  const copy: KeyboardCommand = {
-    handler: () => nodeGraph.copy(),
-    keybinding: KeyMod.CtrlCmd | KeyCode.KEY_C
-  };
+	const copy: KeyboardCommand = {
+		handler: () => nodeGraph.copy(),
+		keybinding: KeyMod.CtrlCmd | KeyCode.KEY_C,
+	}
 
-  const paste: KeyboardCommand = {
-    handler: () => nodeGraph.paste(),
-    keybinding: KeyMod.CtrlCmd | KeyCode.KEY_V
-  };
+	const paste: KeyboardCommand = {
+		handler: () => nodeGraph.paste(),
+		keybinding: KeyMod.CtrlCmd | KeyCode.KEY_V,
+	}
 
-  const cut: KeyboardCommand = {
-    handler: () => nodeGraph.cut(),
-    keybinding: KeyMod.CtrlCmd | KeyCode.KEY_X
-  };
+	const cut: KeyboardCommand = {
+		handler: () => nodeGraph.cut(),
+		keybinding: KeyMod.CtrlCmd | KeyCode.KEY_X,
+	}
 
-  const undo: KeyboardCommand = {
-    handler: () => nodeGraph.undo(),
-    keybinding: KeyMod.CtrlCmd | KeyCode.KEY_Z
-  };
+	const undo: KeyboardCommand = {
+		handler: () => nodeGraph.undo(),
+		keybinding: KeyMod.CtrlCmd | KeyCode.KEY_Z,
+	}
 
-  const redo: KeyboardCommand = {
-    handler: () => nodeGraph.redo(),
-    keybinding: KeyMod.CtrlCmd | KeyMod.Shift | KeyCode.KEY_Z
-  };
+	const redo: KeyboardCommand = {
+		handler: () => nodeGraph.redo(),
+		keybinding: KeyMod.CtrlCmd | KeyMod.Shift | KeyCode.KEY_Z,
+	}
 
-  const navBack: KeyboardCommand = {
-    handler: () => nodeGraph.navigationHistory.goBack(),
-    keybinding: KeyMod.CtrlCmd | KeyCode.US_OPEN_SQUARE_BRACKET
-  };
+	const navBack: KeyboardCommand = {
+		handler: () => nodeGraph.navigationHistory.goBack(),
+		keybinding: KeyMod.CtrlCmd | KeyCode.US_OPEN_SQUARE_BRACKET,
+	}
 
-  const navForward: KeyboardCommand = {
-    handler: () => nodeGraph.navigationHistory.goForward(),
-    keybinding: KeyMod.CtrlCmd | KeyCode.US_CLOSE_SQUARE_BRACKET
-  };
+	const navForward: KeyboardCommand = {
+		handler: () => nodeGraph.navigationHistory.goForward(),
+		keybinding: KeyMod.CtrlCmd | KeyCode.US_CLOSE_SQUARE_BRACKET,
+	}
 
-  const deleteWithBackspace: KeyboardCommand = {
-    handler: () => nodeGraph.delete(),
-    keybinding: KeyCode.Backspace
-  };
+	const deleteWithBackspace: KeyboardCommand = {
+		handler: () => nodeGraph.delete(),
+		keybinding: KeyCode.Backspace,
+	}
 
-  const deleteWithDel: KeyboardCommand = {
-    handler: () => nodeGraph.delete(),
-    keybinding: KeyCode.Delete
-  };
+	const deleteWithDel: KeyboardCommand = {
+		handler: () => nodeGraph.delete(),
+		keybinding: KeyCode.Delete,
+	}
 
-  const createComment: KeyboardCommand = {
-    handler: () =>
-      nodeGraph.activeComponent.graph.commentsModel.addComment(
-        {
-          text: '',
-          fill: true,
-          width: 150,
-          height: 100,
-          x: nodeGraph.latestMousePos.x,
-          y: nodeGraph.latestMousePos.y
-        },
-        { undo: true, label: 'add comment', focusComment: true }
-      ),
-    keybinding: KeyMod.CtrlCmd | KeyCode.US_SLASH
-  };
+	const createComment: KeyboardCommand = {
+		handler: () =>
+			nodeGraph.activeComponent.graph.commentsModel.addComment(
+				{
+					text: '',
+					fill: true,
+					width: 150,
+					height: 100,
+					x: nodeGraph.latestMousePos.x,
+					y: nodeGraph.latestMousePos.y,
+				},
+				{ undo: true, label: 'add comment', focusComment: true }
+			),
+		keybinding: KeyMod.CtrlCmd | KeyCode.US_SLASH,
+	}
 
-  return [copy, paste, cut, undo, redo, navBack, navForward, deleteWithBackspace, deleteWithDel, createComment];
+	return [copy, paste, cut, undo, redo, navBack, navForward, deleteWithBackspace, deleteWithDel, createComment]
 }
 
 export class EditorDocumentProvider implements IDocumentProvider {
-  public static ID = 'EditorDocumentProvider';
+	public static ID = 'EditorDocumentProvider'
 
-  getComponent() {
-    // React Component of the editor view (canvas, and node graph)
-    return EditorDocument;
-  }
+	getComponent() {
+		// React Component of the editor view (canvas, and node graph)
+		return EditorDocument
+	}
 }

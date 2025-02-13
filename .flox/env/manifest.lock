@@ -1,0 +1,1411 @@
+{
+  "lockfile-version": 1,
+  "manifest": {
+    "version": 1,
+    "install": {
+      "alsa-lib": {
+        "pkg-path": "alsa-lib",
+        "pkg-group": "audio",
+        "systems": [
+          "aarch64-linux",
+          "x86_64-linux"
+        ]
+      },
+      "atk": {
+        "pkg-path": "atk",
+        "pkg-group": "gui"
+      },
+      "cups": {
+        "pkg-path": "cups",
+        "pkg-group": "gui"
+      },
+      "dbus": {
+        "pkg-path": "dbus",
+        "pkg-group": "gui"
+      },
+      "fpm": {
+        "pkg-path": "fpm"
+      },
+      "glib": {
+        "pkg-path": "glib",
+        "pkg-group": "gui"
+      },
+      "gtk3": {
+        "pkg-path": "gtk3",
+        "pkg-group": "gui"
+      },
+      "libdrm": {
+        "pkg-path": "libdrm",
+        "pkg-group": "gui",
+        "systems": [
+          "aarch64-linux",
+          "x86_64-linux"
+        ]
+      },
+      "libgbm": {
+        "pkg-path": "libgbm",
+        "pkg-group": "gui",
+        "systems": [
+          "aarch64-linux",
+          "x86_64-linux"
+        ]
+      },
+      "libxkbcommon": {
+        "pkg-path": "libxkbcommon",
+        "pkg-group": "gui"
+      },
+      "nodejs": {
+        "pkg-path": "nodejs",
+        "version": "18.18.2"
+      },
+      "nss": {
+        "pkg-path": "nss",
+        "pkg-group": "gui"
+      }
+    },
+    "hook": {},
+    "profile": {},
+    "options": {
+      "systems": [
+        "aarch64-darwin",
+        "aarch64-linux",
+        "x86_64-darwin",
+        "x86_64-linux"
+      ],
+      "allow": {
+        "licenses": []
+      },
+      "semver": {}
+    }
+  },
+  "packages": [
+    {
+      "attr_path": "alsa-lib",
+      "broken": false,
+      "derivation": "/nix/store/iqx5bi9xghgxnczazlh2cz5c2bqyzdq5-alsa-lib-1.2.13.drv",
+      "description": "ALSA, the Advanced Linux Sound Architecture libraries",
+      "install_id": "alsa-lib",
+      "license": "LGPL-2.1-or-later",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=a79cfe0ebd24952b580b1cf08cd906354996d547",
+      "name": "alsa-lib-1.2.13",
+      "pname": "alsa-lib",
+      "rev": "a79cfe0ebd24952b580b1cf08cd906354996d547",
+      "rev_count": 750629,
+      "rev_date": "2025-02-08T13:21:17Z",
+      "scrape_date": "2025-02-09T05:15:18Z",
+      "stabilities": [
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "1.2.13",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "dev": "/nix/store/l0fpaskglbbhd4jzy9p5p0fb9cy1gw7m-alsa-lib-1.2.13-dev",
+        "out": "/nix/store/ngr0ynyvn760xyb5cng7akww2c9y9g4h-alsa-lib-1.2.13"
+      },
+      "system": "aarch64-linux",
+      "group": "audio",
+      "priority": 5
+    },
+    {
+      "attr_path": "alsa-lib",
+      "broken": false,
+      "derivation": "/nix/store/0h4x0djybvawl063ml5p5bg17yml7i74-alsa-lib-1.2.13.drv",
+      "description": "ALSA, the Advanced Linux Sound Architecture libraries",
+      "install_id": "alsa-lib",
+      "license": "LGPL-2.1-or-later",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=a79cfe0ebd24952b580b1cf08cd906354996d547",
+      "name": "alsa-lib-1.2.13",
+      "pname": "alsa-lib",
+      "rev": "a79cfe0ebd24952b580b1cf08cd906354996d547",
+      "rev_count": 750629,
+      "rev_date": "2025-02-08T13:21:17Z",
+      "scrape_date": "2025-02-09T05:15:18Z",
+      "stabilities": [
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "1.2.13",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "dev": "/nix/store/r1jmr26x1xj47c1x800fdyvcpikq3vq9-alsa-lib-1.2.13-dev",
+        "out": "/nix/store/crzf75f33p8jaids1brwsqg5psx01g5f-alsa-lib-1.2.13"
+      },
+      "system": "x86_64-linux",
+      "group": "audio",
+      "priority": 5
+    },
+    {
+      "attr_path": "atk",
+      "broken": false,
+      "derivation": "/nix/store/kzdflkwk9znyvac77x1566p70r3j2fnr-at-spi2-core-2.54.1.drv",
+      "description": "Assistive Technology Service Provider Interface protocol definitions and daemon for D-Bus",
+      "install_id": "atk",
+      "license": "LGPL-2.1-or-later",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=a79cfe0ebd24952b580b1cf08cd906354996d547",
+      "name": "at-spi2-core-2.54.1",
+      "pname": "atk",
+      "rev": "a79cfe0ebd24952b580b1cf08cd906354996d547",
+      "rev_count": 750629,
+      "rev_date": "2025-02-08T13:21:17Z",
+      "scrape_date": "2025-02-09T05:15:18Z",
+      "stabilities": [
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "at-spi2-core-2.54.1",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "dev": "/nix/store/dlwi96k1nv6n1w628h2r5g1qbkjglq2i-at-spi2-core-2.54.1-dev",
+        "out": "/nix/store/x5k0kdfq40wjsa66v4kwjsgsa31gkpn9-at-spi2-core-2.54.1"
+      },
+      "system": "aarch64-darwin",
+      "group": "gui",
+      "priority": 5
+    },
+    {
+      "attr_path": "atk",
+      "broken": false,
+      "derivation": "/nix/store/8bdy0sgg1vy4aiqzd4662dzlr7y8fpw4-at-spi2-core-2.54.1.drv",
+      "description": "Assistive Technology Service Provider Interface protocol definitions and daemon for D-Bus",
+      "install_id": "atk",
+      "license": "LGPL-2.1-or-later",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=a79cfe0ebd24952b580b1cf08cd906354996d547",
+      "name": "at-spi2-core-2.54.1",
+      "pname": "atk",
+      "rev": "a79cfe0ebd24952b580b1cf08cd906354996d547",
+      "rev_count": 750629,
+      "rev_date": "2025-02-08T13:21:17Z",
+      "scrape_date": "2025-02-09T05:15:18Z",
+      "stabilities": [
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "at-spi2-core-2.54.1",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "debug": "/nix/store/a57pkjfi1nlimvjkmppbb9cscbx84jw4-at-spi2-core-2.54.1-debug",
+        "dev": "/nix/store/ddx2bbn0kmm3k05q7daqalxnrmfv81i7-at-spi2-core-2.54.1-dev",
+        "out": "/nix/store/zdii2as1dxf1c6cz1nr35nzzgwylxpfx-at-spi2-core-2.54.1"
+      },
+      "system": "aarch64-linux",
+      "group": "gui",
+      "priority": 5
+    },
+    {
+      "attr_path": "atk",
+      "broken": false,
+      "derivation": "/nix/store/fbxydhgwlxv0x16aw1s8yn1xvi5asa8n-at-spi2-core-2.54.1.drv",
+      "description": "Assistive Technology Service Provider Interface protocol definitions and daemon for D-Bus",
+      "install_id": "atk",
+      "license": "LGPL-2.1-or-later",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=a79cfe0ebd24952b580b1cf08cd906354996d547",
+      "name": "at-spi2-core-2.54.1",
+      "pname": "atk",
+      "rev": "a79cfe0ebd24952b580b1cf08cd906354996d547",
+      "rev_count": 750629,
+      "rev_date": "2025-02-08T13:21:17Z",
+      "scrape_date": "2025-02-09T05:15:18Z",
+      "stabilities": [
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "at-spi2-core-2.54.1",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "dev": "/nix/store/0clz8as79c3knvxh7pkbgbcx7s24l6n6-at-spi2-core-2.54.1-dev",
+        "out": "/nix/store/wlfydx6ijdpdlw33kpwmg20wyfkqjwa0-at-spi2-core-2.54.1"
+      },
+      "system": "x86_64-darwin",
+      "group": "gui",
+      "priority": 5
+    },
+    {
+      "attr_path": "atk",
+      "broken": false,
+      "derivation": "/nix/store/gc5y67qmfp261qbpy9i5ahamkkyrjna3-at-spi2-core-2.54.1.drv",
+      "description": "Assistive Technology Service Provider Interface protocol definitions and daemon for D-Bus",
+      "install_id": "atk",
+      "license": "LGPL-2.1-or-later",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=a79cfe0ebd24952b580b1cf08cd906354996d547",
+      "name": "at-spi2-core-2.54.1",
+      "pname": "atk",
+      "rev": "a79cfe0ebd24952b580b1cf08cd906354996d547",
+      "rev_count": 750629,
+      "rev_date": "2025-02-08T13:21:17Z",
+      "scrape_date": "2025-02-09T05:15:18Z",
+      "stabilities": [
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "at-spi2-core-2.54.1",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "debug": "/nix/store/ck5c75gavm80cyh9vq7gvdafr515bsj9-at-spi2-core-2.54.1-debug",
+        "dev": "/nix/store/j9rppcgghyfdfd4hhl3sdrfqk4f8zlyv-at-spi2-core-2.54.1-dev",
+        "out": "/nix/store/7mqr7v28fgxwfqbdcw91qq9qlqvl63hx-at-spi2-core-2.54.1"
+      },
+      "system": "x86_64-linux",
+      "group": "gui",
+      "priority": 5
+    },
+    {
+      "attr_path": "cups",
+      "broken": false,
+      "derivation": "/nix/store/bjq6g6l9j90n91ydpmjxqywfxbmlmqrq-cups-2.4.11.drv",
+      "description": "Standards-based printing system for UNIX",
+      "install_id": "cups",
+      "license": "Apache-2.0",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=a79cfe0ebd24952b580b1cf08cd906354996d547",
+      "name": "cups-2.4.11",
+      "pname": "cups",
+      "rev": "a79cfe0ebd24952b580b1cf08cd906354996d547",
+      "rev_count": 750629,
+      "rev_date": "2025-02-08T13:21:17Z",
+      "scrape_date": "2025-02-09T05:15:18Z",
+      "stabilities": [
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "2.4.11",
+      "outputs_to_install": [
+        "man",
+        "out"
+      ],
+      "outputs": {
+        "dev": "/nix/store/d0p6j5r11c3051nxqywkaa1xfjvhwr26-cups-2.4.11-dev",
+        "lib": "/nix/store/pgv1n57w5cxyzahmddi5q5j3c9impcbx-cups-2.4.11-lib",
+        "man": "/nix/store/an7a7r700c97jdp31jd5gsv8f7l9jj1j-cups-2.4.11-man",
+        "out": "/nix/store/86wyrfza9zxmflfi0dgdjgrbyk1g5czh-cups-2.4.11"
+      },
+      "system": "aarch64-darwin",
+      "group": "gui",
+      "priority": 5
+    },
+    {
+      "attr_path": "cups",
+      "broken": false,
+      "derivation": "/nix/store/m8na58vqxhnxz2rhs45dp4vhb1d2mbfs-cups-2.4.11.drv",
+      "description": "Standards-based printing system for UNIX",
+      "install_id": "cups",
+      "license": "Apache-2.0",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=a79cfe0ebd24952b580b1cf08cd906354996d547",
+      "name": "cups-2.4.11",
+      "pname": "cups",
+      "rev": "a79cfe0ebd24952b580b1cf08cd906354996d547",
+      "rev_count": 750629,
+      "rev_date": "2025-02-08T13:21:17Z",
+      "scrape_date": "2025-02-09T05:15:18Z",
+      "stabilities": [
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "2.4.11",
+      "outputs_to_install": [
+        "man",
+        "out"
+      ],
+      "outputs": {
+        "dev": "/nix/store/8xxlhk03ppxgs34xq4dhr9aj1krpz0v3-cups-2.4.11-dev",
+        "lib": "/nix/store/jcg9raf4jfbv1v1cvplq0m858ijwf62i-cups-2.4.11-lib",
+        "man": "/nix/store/75q3cn9siazqi5d44xbyfm8jwwbll30n-cups-2.4.11-man",
+        "out": "/nix/store/n02jy2z181x0ldxv3ryxwy2j65krr719-cups-2.4.11"
+      },
+      "system": "aarch64-linux",
+      "group": "gui",
+      "priority": 5
+    },
+    {
+      "attr_path": "cups",
+      "broken": false,
+      "derivation": "/nix/store/3gqrv6x06isvhi8dh5j4anrjaybyzs6l-cups-2.4.11.drv",
+      "description": "Standards-based printing system for UNIX",
+      "install_id": "cups",
+      "license": "Apache-2.0",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=a79cfe0ebd24952b580b1cf08cd906354996d547",
+      "name": "cups-2.4.11",
+      "pname": "cups",
+      "rev": "a79cfe0ebd24952b580b1cf08cd906354996d547",
+      "rev_count": 750629,
+      "rev_date": "2025-02-08T13:21:17Z",
+      "scrape_date": "2025-02-09T05:15:18Z",
+      "stabilities": [
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "2.4.11",
+      "outputs_to_install": [
+        "man",
+        "out"
+      ],
+      "outputs": {
+        "dev": "/nix/store/sqgq0aay31qvlhrcwy4jkf1dkjwy3qdw-cups-2.4.11-dev",
+        "lib": "/nix/store/givign2kcrg6j37mv9m9hgkanqigq40z-cups-2.4.11-lib",
+        "man": "/nix/store/4jcgpxplrl0qlw26508942j1wfr11lbh-cups-2.4.11-man",
+        "out": "/nix/store/zwm5l0vk6knj12fc5317imnx23c02xyb-cups-2.4.11"
+      },
+      "system": "x86_64-darwin",
+      "group": "gui",
+      "priority": 5
+    },
+    {
+      "attr_path": "cups",
+      "broken": false,
+      "derivation": "/nix/store/qgxyplzgffzha6sazvy16g70mgjah7lv-cups-2.4.11.drv",
+      "description": "Standards-based printing system for UNIX",
+      "install_id": "cups",
+      "license": "Apache-2.0",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=a79cfe0ebd24952b580b1cf08cd906354996d547",
+      "name": "cups-2.4.11",
+      "pname": "cups",
+      "rev": "a79cfe0ebd24952b580b1cf08cd906354996d547",
+      "rev_count": 750629,
+      "rev_date": "2025-02-08T13:21:17Z",
+      "scrape_date": "2025-02-09T05:15:18Z",
+      "stabilities": [
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "2.4.11",
+      "outputs_to_install": [
+        "man",
+        "out"
+      ],
+      "outputs": {
+        "dev": "/nix/store/ps1v609gjv5b07b45zmi1agvmhbjgzbx-cups-2.4.11-dev",
+        "lib": "/nix/store/2rxwknpri7jyl3sxlq94k3zz2qxr9l3i-cups-2.4.11-lib",
+        "man": "/nix/store/93hn0jsybvnrgji65xkp89gnvlj1csh6-cups-2.4.11-man",
+        "out": "/nix/store/rlqh2g71jkz0zspk6rkh0b11chp95byj-cups-2.4.11"
+      },
+      "system": "x86_64-linux",
+      "group": "gui",
+      "priority": 5
+    },
+    {
+      "attr_path": "dbus",
+      "broken": false,
+      "derivation": "/nix/store/xpkzm27qxmlr8xs2ggs0j9vmrp1q5f3d-dbus-1.14.10.drv",
+      "description": "Simple interprocess messaging system",
+      "install_id": "dbus",
+      "license": "GPL-2.0-or-later",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=a79cfe0ebd24952b580b1cf08cd906354996d547",
+      "name": "dbus-1.14.10",
+      "pname": "dbus",
+      "rev": "a79cfe0ebd24952b580b1cf08cd906354996d547",
+      "rev_count": 750629,
+      "rev_date": "2025-02-08T13:21:17Z",
+      "scrape_date": "2025-02-09T05:15:18Z",
+      "stabilities": [
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "1.14.10",
+      "outputs_to_install": [
+        "man",
+        "out"
+      ],
+      "outputs": {
+        "dev": "/nix/store/q63yg6zi6n57q8bsl6mg7mgn46w27l88-dbus-1.14.10-dev",
+        "doc": "/nix/store/0m66nxx9nbdw5q631lwl1qlc5f1j0zjr-dbus-1.14.10-doc",
+        "lib": "/nix/store/iaqllv8lva5mhrivpkfbvgh385qazy83-dbus-1.14.10-lib",
+        "man": "/nix/store/g03ik80gx3n2jf2x5wjlmdbxgm74dv0i-dbus-1.14.10-man",
+        "out": "/nix/store/35i19f017v8a8q4kzs2j6k2mkfch609l-dbus-1.14.10"
+      },
+      "system": "aarch64-darwin",
+      "group": "gui",
+      "priority": 5
+    },
+    {
+      "attr_path": "dbus",
+      "broken": false,
+      "derivation": "/nix/store/8ayvf10vii6cnrh5vwq9jgc7485v7hpb-dbus-1.14.10.drv",
+      "description": "Simple interprocess messaging system",
+      "install_id": "dbus",
+      "license": "GPL-2.0-or-later",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=a79cfe0ebd24952b580b1cf08cd906354996d547",
+      "name": "dbus-1.14.10",
+      "pname": "dbus",
+      "rev": "a79cfe0ebd24952b580b1cf08cd906354996d547",
+      "rev_count": 750629,
+      "rev_date": "2025-02-08T13:21:17Z",
+      "scrape_date": "2025-02-09T05:15:18Z",
+      "stabilities": [
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "1.14.10",
+      "outputs_to_install": [
+        "man",
+        "out"
+      ],
+      "outputs": {
+        "debug": "/nix/store/rp66sckvfhy74xccfad8idklm49zgmw2-dbus-1.14.10-debug",
+        "dev": "/nix/store/5w71bnrybma5j0iy64s8c5rkrzsh6dvv-dbus-1.14.10-dev",
+        "doc": "/nix/store/bx0d6hk5l7m8b3p5pzbdqjzypbyalpxn-dbus-1.14.10-doc",
+        "lib": "/nix/store/dpiqkb3gp7iyx83krjijvngfrw0n2pln-dbus-1.14.10-lib",
+        "man": "/nix/store/j7q0j4bpsqgjms2f18a5b3miv2qjsnai-dbus-1.14.10-man",
+        "out": "/nix/store/4f5ri8ag0ijwrcg54vgh6j9n52sn5ykg-dbus-1.14.10"
+      },
+      "system": "aarch64-linux",
+      "group": "gui",
+      "priority": 5
+    },
+    {
+      "attr_path": "dbus",
+      "broken": false,
+      "derivation": "/nix/store/mf717vzx4dmpdp0hy5a9wksjmi6jp86m-dbus-1.14.10.drv",
+      "description": "Simple interprocess messaging system",
+      "install_id": "dbus",
+      "license": "GPL-2.0-or-later",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=a79cfe0ebd24952b580b1cf08cd906354996d547",
+      "name": "dbus-1.14.10",
+      "pname": "dbus",
+      "rev": "a79cfe0ebd24952b580b1cf08cd906354996d547",
+      "rev_count": 750629,
+      "rev_date": "2025-02-08T13:21:17Z",
+      "scrape_date": "2025-02-09T05:15:18Z",
+      "stabilities": [
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "1.14.10",
+      "outputs_to_install": [
+        "man",
+        "out"
+      ],
+      "outputs": {
+        "dev": "/nix/store/5bkhr2w5jcmwqcf9hjyax288mwn542ac-dbus-1.14.10-dev",
+        "doc": "/nix/store/kj52kjfy0p7ky0z9712z2mxszbyqxvnf-dbus-1.14.10-doc",
+        "lib": "/nix/store/9frdagsx6p1bkgf6dzh5k7spi7adjfjz-dbus-1.14.10-lib",
+        "man": "/nix/store/frjaxa6fyi6w6zn3spjgzmk4xcb5pkvv-dbus-1.14.10-man",
+        "out": "/nix/store/w58piwm8hjn9hvzl57z4mb5x8kaki3qk-dbus-1.14.10"
+      },
+      "system": "x86_64-darwin",
+      "group": "gui",
+      "priority": 5
+    },
+    {
+      "attr_path": "dbus",
+      "broken": false,
+      "derivation": "/nix/store/mlqmy1qhd7gnayif20jdpasjhybjbpmp-dbus-1.14.10.drv",
+      "description": "Simple interprocess messaging system",
+      "install_id": "dbus",
+      "license": "GPL-2.0-or-later",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=a79cfe0ebd24952b580b1cf08cd906354996d547",
+      "name": "dbus-1.14.10",
+      "pname": "dbus",
+      "rev": "a79cfe0ebd24952b580b1cf08cd906354996d547",
+      "rev_count": 750629,
+      "rev_date": "2025-02-08T13:21:17Z",
+      "scrape_date": "2025-02-09T05:15:18Z",
+      "stabilities": [
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "1.14.10",
+      "outputs_to_install": [
+        "man",
+        "out"
+      ],
+      "outputs": {
+        "debug": "/nix/store/q81d3577j4s38335nrikpbaml7xh6vm4-dbus-1.14.10-debug",
+        "dev": "/nix/store/wpig5y0filazvimab9sq4jqr29n9472n-dbus-1.14.10-dev",
+        "doc": "/nix/store/g96sqg23c5iikbmr49rp98m1ymc5fh2i-dbus-1.14.10-doc",
+        "lib": "/nix/store/gimhlpcv0qzrlxqnbwh67ab3x1nvdnxv-dbus-1.14.10-lib",
+        "man": "/nix/store/dyal710b0mzq2jvlr4mghcai0y8a4dpm-dbus-1.14.10-man",
+        "out": "/nix/store/0mr2annxs94qbs8l0rcmkd5b4mbnbc2h-dbus-1.14.10"
+      },
+      "system": "x86_64-linux",
+      "group": "gui",
+      "priority": 5
+    },
+    {
+      "attr_path": "glib",
+      "broken": false,
+      "derivation": "/nix/store/pnm339bjgji9wbrzfxrpsxbi694ajfqj-glib-2.82.4.drv",
+      "description": "C library of programming buildings blocks",
+      "install_id": "glib",
+      "license": "LGPL-2.1-or-later",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=a79cfe0ebd24952b580b1cf08cd906354996d547",
+      "name": "glib-2.82.4",
+      "pname": "glib",
+      "rev": "a79cfe0ebd24952b580b1cf08cd906354996d547",
+      "rev_count": 750629,
+      "rev_date": "2025-02-08T13:21:17Z",
+      "scrape_date": "2025-02-09T05:15:18Z",
+      "stabilities": [
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "2.82.4",
+      "outputs_to_install": [
+        "bin"
+      ],
+      "outputs": {
+        "bin": "/nix/store/hwin3cgz5jwi6fv371mxngn9fdf9dr3i-glib-2.82.4-bin",
+        "dev": "/nix/store/qlhg29dwgiv01w5qv42fwyld9mk5g6wr-glib-2.82.4-dev",
+        "devdoc": "/nix/store/3yarqfd4f90ba04msdl82cqrif93rh5i-glib-2.82.4-devdoc",
+        "out": "/nix/store/9y9f327vnnb7aghhzif2xlfwn1dk53lp-glib-2.82.4"
+      },
+      "system": "aarch64-darwin",
+      "group": "gui",
+      "priority": 5
+    },
+    {
+      "attr_path": "glib",
+      "broken": false,
+      "derivation": "/nix/store/jvq0zk5m8b1f415ixcrdx97yrnykmsn6-glib-2.82.4.drv",
+      "description": "C library of programming buildings blocks",
+      "install_id": "glib",
+      "license": "LGPL-2.1-or-later",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=a79cfe0ebd24952b580b1cf08cd906354996d547",
+      "name": "glib-2.82.4",
+      "pname": "glib",
+      "rev": "a79cfe0ebd24952b580b1cf08cd906354996d547",
+      "rev_count": 750629,
+      "rev_date": "2025-02-08T13:21:17Z",
+      "scrape_date": "2025-02-09T05:15:18Z",
+      "stabilities": [
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "2.82.4",
+      "outputs_to_install": [
+        "bin"
+      ],
+      "outputs": {
+        "bin": "/nix/store/lih1f2q7ifddfm1qixyg2f61a8m3ydzy-glib-2.82.4-bin",
+        "debug": "/nix/store/03cscqzzyd7l11ya1khdrwcsc9gakasy-glib-2.82.4-debug",
+        "dev": "/nix/store/id7z9ykc3prc0lhi0qyhwyz929j8ycss-glib-2.82.4-dev",
+        "devdoc": "/nix/store/95mvf0jkv674w6j5h0x6c0xa31vpk98s-glib-2.82.4-devdoc",
+        "out": "/nix/store/51zv70b59n0fzzpylwhzy5mw37m2yijw-glib-2.82.4"
+      },
+      "system": "aarch64-linux",
+      "group": "gui",
+      "priority": 5
+    },
+    {
+      "attr_path": "glib",
+      "broken": false,
+      "derivation": "/nix/store/vv9gpf2y94ys5673zcnislfhfbgg2wk7-glib-2.82.4.drv",
+      "description": "C library of programming buildings blocks",
+      "install_id": "glib",
+      "license": "LGPL-2.1-or-later",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=a79cfe0ebd24952b580b1cf08cd906354996d547",
+      "name": "glib-2.82.4",
+      "pname": "glib",
+      "rev": "a79cfe0ebd24952b580b1cf08cd906354996d547",
+      "rev_count": 750629,
+      "rev_date": "2025-02-08T13:21:17Z",
+      "scrape_date": "2025-02-09T05:15:18Z",
+      "stabilities": [
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "2.82.4",
+      "outputs_to_install": [
+        "bin"
+      ],
+      "outputs": {
+        "bin": "/nix/store/wj6lmsjn0xp06qm9ff195jn7pcssxj6l-glib-2.82.4-bin",
+        "dev": "/nix/store/rkw99d07i6r79qdj572l0hranknzbcx8-glib-2.82.4-dev",
+        "devdoc": "/nix/store/0wly0qydkh632k6b096yzg8pq8n3hz00-glib-2.82.4-devdoc",
+        "out": "/nix/store/9rn9xy44c623an4q14p2iyl9frm49988-glib-2.82.4"
+      },
+      "system": "x86_64-darwin",
+      "group": "gui",
+      "priority": 5
+    },
+    {
+      "attr_path": "glib",
+      "broken": false,
+      "derivation": "/nix/store/knbf80q3h25xs9skj0057liwfaidr1qq-glib-2.82.4.drv",
+      "description": "C library of programming buildings blocks",
+      "install_id": "glib",
+      "license": "LGPL-2.1-or-later",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=a79cfe0ebd24952b580b1cf08cd906354996d547",
+      "name": "glib-2.82.4",
+      "pname": "glib",
+      "rev": "a79cfe0ebd24952b580b1cf08cd906354996d547",
+      "rev_count": 750629,
+      "rev_date": "2025-02-08T13:21:17Z",
+      "scrape_date": "2025-02-09T05:15:18Z",
+      "stabilities": [
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "2.82.4",
+      "outputs_to_install": [
+        "bin"
+      ],
+      "outputs": {
+        "bin": "/nix/store/dhk9rjvrblcbsv68mw32jjlaw9v08j1d-glib-2.82.4-bin",
+        "debug": "/nix/store/rykc4a3m7py724dcq82yqn1rv6kgq3q9-glib-2.82.4-debug",
+        "dev": "/nix/store/ck6zfmyhb81wjq86zy6jxdisf3i89a5x-glib-2.82.4-dev",
+        "devdoc": "/nix/store/x7985xcy9vig0yk0zrhgzz2g3rjn15l5-glib-2.82.4-devdoc",
+        "out": "/nix/store/havggkqdmg0hab2lmgdpjljni5ms8n9q-glib-2.82.4"
+      },
+      "system": "x86_64-linux",
+      "group": "gui",
+      "priority": 5
+    },
+    {
+      "attr_path": "gtk3",
+      "broken": false,
+      "derivation": "/nix/store/288qq6i6x1waqkwxbrm2lvqm6pf9qdrc-gtk+3-3.24.43.drv",
+      "description": "Multi-platform toolkit for creating graphical user interfaces",
+      "install_id": "gtk3",
+      "license": "LGPL-2.0-or-later",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=a79cfe0ebd24952b580b1cf08cd906354996d547",
+      "name": "gtk+3-3.24.43",
+      "pname": "gtk3",
+      "rev": "a79cfe0ebd24952b580b1cf08cd906354996d547",
+      "rev_count": 750629,
+      "rev_date": "2025-02-08T13:21:17Z",
+      "scrape_date": "2025-02-09T05:15:18Z",
+      "stabilities": [
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "gtk+3-3.24.43",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "dev": "/nix/store/s1p19z57rb71g5jhbqnvi11s0wzrjxks-gtk+3-3.24.43-dev",
+        "devdoc": "/nix/store/w26pac7xlix99j0kh15f8jfdixdcss9m-gtk+3-3.24.43-devdoc",
+        "out": "/nix/store/5wdm1fszcg6zzyajm83qxzsd59mvcbwh-gtk+3-3.24.43"
+      },
+      "system": "aarch64-darwin",
+      "group": "gui",
+      "priority": 5
+    },
+    {
+      "attr_path": "gtk3",
+      "broken": false,
+      "derivation": "/nix/store/fpkvwkszqphdh68m12jrr4iz4vfkiy32-gtk+3-3.24.43.drv",
+      "description": "Multi-platform toolkit for creating graphical user interfaces",
+      "install_id": "gtk3",
+      "license": "LGPL-2.0-or-later",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=a79cfe0ebd24952b580b1cf08cd906354996d547",
+      "name": "gtk+3-3.24.43",
+      "pname": "gtk3",
+      "rev": "a79cfe0ebd24952b580b1cf08cd906354996d547",
+      "rev_count": 750629,
+      "rev_date": "2025-02-08T13:21:17Z",
+      "scrape_date": "2025-02-09T05:15:18Z",
+      "stabilities": [
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "gtk+3-3.24.43",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "debug": "/nix/store/pvwyqw7gxcc0n3bpflnfzbzk5gy6h2c1-gtk+3-3.24.43-debug",
+        "dev": "/nix/store/vpgvw8z05xdq9xasdwwzilm0rda21055-gtk+3-3.24.43-dev",
+        "devdoc": "/nix/store/6b63p3mk81nd6iw2k4bgn8qwqrd6w3ig-gtk+3-3.24.43-devdoc",
+        "out": "/nix/store/bmm3vbmc3hwg65iansvzfki3r6sxkx3c-gtk+3-3.24.43"
+      },
+      "system": "aarch64-linux",
+      "group": "gui",
+      "priority": 5
+    },
+    {
+      "attr_path": "gtk3",
+      "broken": false,
+      "derivation": "/nix/store/5zf3kn3pn1y2jnc5rlkjxpgw4an59a24-gtk+3-3.24.43.drv",
+      "description": "Multi-platform toolkit for creating graphical user interfaces",
+      "install_id": "gtk3",
+      "license": "LGPL-2.0-or-later",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=a79cfe0ebd24952b580b1cf08cd906354996d547",
+      "name": "gtk+3-3.24.43",
+      "pname": "gtk3",
+      "rev": "a79cfe0ebd24952b580b1cf08cd906354996d547",
+      "rev_count": 750629,
+      "rev_date": "2025-02-08T13:21:17Z",
+      "scrape_date": "2025-02-09T05:15:18Z",
+      "stabilities": [
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "gtk+3-3.24.43",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "dev": "/nix/store/nla6z1in7zcqj995avwanb3hp25la79h-gtk+3-3.24.43-dev",
+        "devdoc": "/nix/store/sfskdxin78acmq4k9byqh8bczk2pqbz7-gtk+3-3.24.43-devdoc",
+        "out": "/nix/store/14f6cfnhnk3bi3cvv5qw8jrr49nhk57p-gtk+3-3.24.43"
+      },
+      "system": "x86_64-darwin",
+      "group": "gui",
+      "priority": 5
+    },
+    {
+      "attr_path": "gtk3",
+      "broken": false,
+      "derivation": "/nix/store/gjhs35w4v63wzv5r0xwqsk9gil5rzf6z-gtk+3-3.24.43.drv",
+      "description": "Multi-platform toolkit for creating graphical user interfaces",
+      "install_id": "gtk3",
+      "license": "LGPL-2.0-or-later",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=a79cfe0ebd24952b580b1cf08cd906354996d547",
+      "name": "gtk+3-3.24.43",
+      "pname": "gtk3",
+      "rev": "a79cfe0ebd24952b580b1cf08cd906354996d547",
+      "rev_count": 750629,
+      "rev_date": "2025-02-08T13:21:17Z",
+      "scrape_date": "2025-02-09T05:15:18Z",
+      "stabilities": [
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "gtk+3-3.24.43",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "debug": "/nix/store/csgy8xg6g08chzxsh8iw33sbjg2vw5n9-gtk+3-3.24.43-debug",
+        "dev": "/nix/store/mcs2dnknkcsjbf0kxhfzxr3g46nxqxj2-gtk+3-3.24.43-dev",
+        "devdoc": "/nix/store/m3pkimac93kvqdw066mxz37xnk18i8x5-gtk+3-3.24.43-devdoc",
+        "out": "/nix/store/qbaqmm44k3dlrklaz9bml687jkqwsd6j-gtk+3-3.24.43"
+      },
+      "system": "x86_64-linux",
+      "group": "gui",
+      "priority": 5
+    },
+    {
+      "attr_path": "libdrm",
+      "broken": false,
+      "derivation": "/nix/store/cjq6n980dyq1l0z6zmqx3d5042588yrj-libdrm-2.4.124.drv",
+      "description": "Direct Rendering Manager library and headers",
+      "install_id": "libdrm",
+      "license": "MIT",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=a79cfe0ebd24952b580b1cf08cd906354996d547",
+      "name": "libdrm-2.4.124",
+      "pname": "libdrm",
+      "rev": "a79cfe0ebd24952b580b1cf08cd906354996d547",
+      "rev_count": 750629,
+      "rev_date": "2025-02-08T13:21:17Z",
+      "scrape_date": "2025-02-09T05:15:18Z",
+      "stabilities": [
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "2.4.124",
+      "outputs_to_install": [
+        "bin"
+      ],
+      "outputs": {
+        "bin": "/nix/store/1mpsxnk0dzm0h922i690qrpwhyycrxhh-libdrm-2.4.124-bin",
+        "dev": "/nix/store/rl7h3lz8820vb7v5cx1qc7mmcawvwaan-libdrm-2.4.124-dev",
+        "out": "/nix/store/g0gm2s2gxr2lbivpf6w3781p50pvf27g-libdrm-2.4.124"
+      },
+      "system": "aarch64-linux",
+      "group": "gui",
+      "priority": 5
+    },
+    {
+      "attr_path": "libdrm",
+      "broken": false,
+      "derivation": "/nix/store/bka9jy9phrp354rrr0a67d05h5abc6zx-libdrm-2.4.124.drv",
+      "description": "Direct Rendering Manager library and headers",
+      "install_id": "libdrm",
+      "license": "MIT",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=a79cfe0ebd24952b580b1cf08cd906354996d547",
+      "name": "libdrm-2.4.124",
+      "pname": "libdrm",
+      "rev": "a79cfe0ebd24952b580b1cf08cd906354996d547",
+      "rev_count": 750629,
+      "rev_date": "2025-02-08T13:21:17Z",
+      "scrape_date": "2025-02-09T05:15:18Z",
+      "stabilities": [
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "2.4.124",
+      "outputs_to_install": [
+        "bin"
+      ],
+      "outputs": {
+        "bin": "/nix/store/64hryang44j97k0q69rh6p11masmrybi-libdrm-2.4.124-bin",
+        "dev": "/nix/store/f9vp3fdvg57pacplrx8csbiwqw0vv91s-libdrm-2.4.124-dev",
+        "out": "/nix/store/8lfs1r3xwrz62sb9qcz08y80d5a7j7jg-libdrm-2.4.124"
+      },
+      "system": "x86_64-linux",
+      "group": "gui",
+      "priority": 5
+    },
+    {
+      "attr_path": "libgbm",
+      "broken": false,
+      "derivation": "/nix/store/q12r1640rpfq93hs47g31lkwd6b5n9mr-mesa-libgbm-24.3.4.drv",
+      "description": "Open source 3D graphics library",
+      "install_id": "libgbm",
+      "license": "[ MIT ]",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=a79cfe0ebd24952b580b1cf08cd906354996d547",
+      "name": "mesa-libgbm-24.3.4",
+      "pname": "libgbm",
+      "rev": "a79cfe0ebd24952b580b1cf08cd906354996d547",
+      "rev_count": 750629,
+      "rev_date": "2025-02-08T13:21:17Z",
+      "scrape_date": "2025-02-09T05:15:18Z",
+      "stabilities": [
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "mesa-libgbm-24.3.4",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "out": "/nix/store/ziq74wacpbhn10fpcj60s6w5hpc39vxj-mesa-libgbm-24.3.4"
+      },
+      "system": "aarch64-linux",
+      "group": "gui",
+      "priority": 5
+    },
+    {
+      "attr_path": "libgbm",
+      "broken": false,
+      "derivation": "/nix/store/x30w4wd25mkci39l8p4p6i8lyhjq95fs-mesa-libgbm-24.3.4.drv",
+      "description": "Open source 3D graphics library",
+      "install_id": "libgbm",
+      "license": "[ MIT ]",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=a79cfe0ebd24952b580b1cf08cd906354996d547",
+      "name": "mesa-libgbm-24.3.4",
+      "pname": "libgbm",
+      "rev": "a79cfe0ebd24952b580b1cf08cd906354996d547",
+      "rev_count": 750629,
+      "rev_date": "2025-02-08T13:21:17Z",
+      "scrape_date": "2025-02-09T05:15:18Z",
+      "stabilities": [
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "mesa-libgbm-24.3.4",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "out": "/nix/store/qab9dp2bhg8jn5si94r4308n29wlamn2-mesa-libgbm-24.3.4"
+      },
+      "system": "x86_64-linux",
+      "group": "gui",
+      "priority": 5
+    },
+    {
+      "attr_path": "libxkbcommon",
+      "broken": false,
+      "derivation": "/nix/store/b4w58rbx7qzg3xgdw0acn8ar0mp5mqf2-libxkbcommon-1.7.0.drv",
+      "description": "Library to handle keyboard descriptions",
+      "install_id": "libxkbcommon",
+      "license": "MIT",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=a79cfe0ebd24952b580b1cf08cd906354996d547",
+      "name": "libxkbcommon-1.7.0",
+      "pname": "libxkbcommon",
+      "rev": "a79cfe0ebd24952b580b1cf08cd906354996d547",
+      "rev_count": 750629,
+      "rev_date": "2025-02-08T13:21:17Z",
+      "scrape_date": "2025-02-09T05:15:18Z",
+      "stabilities": [
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "1.7.0",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "dev": "/nix/store/hd39alakm8qzalambxwwn236234b62wf-libxkbcommon-1.7.0-dev",
+        "doc": "/nix/store/b0lk7ij0qy8lf9waw77257kvw3j1ssjv-libxkbcommon-1.7.0-doc",
+        "out": "/nix/store/bkc7whwhmbybqz24ack2yal7hggjiavv-libxkbcommon-1.7.0"
+      },
+      "system": "aarch64-darwin",
+      "group": "gui",
+      "priority": 5
+    },
+    {
+      "attr_path": "libxkbcommon",
+      "broken": false,
+      "derivation": "/nix/store/llb0wzlixdm080snfq97figj0zcx84jl-libxkbcommon-1.7.0.drv",
+      "description": "Library to handle keyboard descriptions",
+      "install_id": "libxkbcommon",
+      "license": "MIT",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=a79cfe0ebd24952b580b1cf08cd906354996d547",
+      "name": "libxkbcommon-1.7.0",
+      "pname": "libxkbcommon",
+      "rev": "a79cfe0ebd24952b580b1cf08cd906354996d547",
+      "rev_count": 750629,
+      "rev_date": "2025-02-08T13:21:17Z",
+      "scrape_date": "2025-02-09T05:15:18Z",
+      "stabilities": [
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "1.7.0",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "dev": "/nix/store/fahiakalfzq6lzlnv7xxm6j2nm01033j-libxkbcommon-1.7.0-dev",
+        "doc": "/nix/store/iza13vqrp7ylf3zskh1sfv1r3di9qypi-libxkbcommon-1.7.0-doc",
+        "out": "/nix/store/pphc6my8n3z3llxajrmkq64b1qcpgqsi-libxkbcommon-1.7.0"
+      },
+      "system": "aarch64-linux",
+      "group": "gui",
+      "priority": 5
+    },
+    {
+      "attr_path": "libxkbcommon",
+      "broken": false,
+      "derivation": "/nix/store/zx64xq0njmzkr0hw2j1jn6a8yq6h9s3h-libxkbcommon-1.7.0.drv",
+      "description": "Library to handle keyboard descriptions",
+      "install_id": "libxkbcommon",
+      "license": "MIT",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=a79cfe0ebd24952b580b1cf08cd906354996d547",
+      "name": "libxkbcommon-1.7.0",
+      "pname": "libxkbcommon",
+      "rev": "a79cfe0ebd24952b580b1cf08cd906354996d547",
+      "rev_count": 750629,
+      "rev_date": "2025-02-08T13:21:17Z",
+      "scrape_date": "2025-02-09T05:15:18Z",
+      "stabilities": [
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "1.7.0",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "dev": "/nix/store/40d68qlpr77v623a6jyg0nl25rwvx6lc-libxkbcommon-1.7.0-dev",
+        "doc": "/nix/store/b5cdg0ll4if952k7l1szjdd3frjkgvc8-libxkbcommon-1.7.0-doc",
+        "out": "/nix/store/dbxbpdx736a39fjhhpjf4x9dya4df577-libxkbcommon-1.7.0"
+      },
+      "system": "x86_64-darwin",
+      "group": "gui",
+      "priority": 5
+    },
+    {
+      "attr_path": "libxkbcommon",
+      "broken": false,
+      "derivation": "/nix/store/kh8qi0cvhkbxfsfam6qxkk41adhq7ppi-libxkbcommon-1.7.0.drv",
+      "description": "Library to handle keyboard descriptions",
+      "install_id": "libxkbcommon",
+      "license": "MIT",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=a79cfe0ebd24952b580b1cf08cd906354996d547",
+      "name": "libxkbcommon-1.7.0",
+      "pname": "libxkbcommon",
+      "rev": "a79cfe0ebd24952b580b1cf08cd906354996d547",
+      "rev_count": 750629,
+      "rev_date": "2025-02-08T13:21:17Z",
+      "scrape_date": "2025-02-09T05:15:18Z",
+      "stabilities": [
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "1.7.0",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "dev": "/nix/store/kw22h9mlijbdym7qwyv7hbkc1hnk8fb8-libxkbcommon-1.7.0-dev",
+        "doc": "/nix/store/xi31ydrpv4a5f7wnk0wvsdnvqj2c8d0p-libxkbcommon-1.7.0-doc",
+        "out": "/nix/store/swlxxvvhncja9ky08sphv75aswhgj2hy-libxkbcommon-1.7.0"
+      },
+      "system": "x86_64-linux",
+      "group": "gui",
+      "priority": 5
+    },
+    {
+      "attr_path": "nss",
+      "broken": false,
+      "derivation": "/nix/store/c2h3hj47yhk3j30v5bbsfyv8qs3hi2cc-nss-3.101.2.drv",
+      "description": "Set of libraries for development of security-enabled client and server applications",
+      "install_id": "nss",
+      "license": "MPL-2.0",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=a79cfe0ebd24952b580b1cf08cd906354996d547",
+      "name": "nss-3.101.2",
+      "pname": "nss",
+      "rev": "a79cfe0ebd24952b580b1cf08cd906354996d547",
+      "rev_count": 750629,
+      "rev_date": "2025-02-08T13:21:17Z",
+      "scrape_date": "2025-02-09T05:15:18Z",
+      "stabilities": [
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "3.101.2",
+      "outputs_to_install": [
+        "man",
+        "out"
+      ],
+      "outputs": {
+        "dev": "/nix/store/v5vna9rjg4g1jw2ah2vvzp59i9m4shy3-nss-3.101.2-dev",
+        "man": "/nix/store/cn9z8n8awv1yc90iggzp21gv0kh8w8lw-nss-3.101.2-man",
+        "out": "/nix/store/s4i0x70jadylx80dhf23lqa4w46480ns-nss-3.101.2",
+        "tools": "/nix/store/hbi8n83cx33zdccjipfjb5yzlvl6lf4h-nss-3.101.2-tools"
+      },
+      "system": "aarch64-darwin",
+      "group": "gui",
+      "priority": 5
+    },
+    {
+      "attr_path": "nss",
+      "broken": false,
+      "derivation": "/nix/store/ibw93kv0grwhpiil12xz84ixg6avhyg5-nss-3.101.2.drv",
+      "description": "Set of libraries for development of security-enabled client and server applications",
+      "install_id": "nss",
+      "license": "MPL-2.0",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=a79cfe0ebd24952b580b1cf08cd906354996d547",
+      "name": "nss-3.101.2",
+      "pname": "nss",
+      "rev": "a79cfe0ebd24952b580b1cf08cd906354996d547",
+      "rev_count": 750629,
+      "rev_date": "2025-02-08T13:21:17Z",
+      "scrape_date": "2025-02-09T05:15:18Z",
+      "stabilities": [
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "3.101.2",
+      "outputs_to_install": [
+        "man",
+        "out"
+      ],
+      "outputs": {
+        "dev": "/nix/store/5748fjzjfq2cm4s97w0qbbnwpqibc3f4-nss-3.101.2-dev",
+        "man": "/nix/store/9qifahnsqja84s8ayf6z6i2rxh8kz9yz-nss-3.101.2-man",
+        "out": "/nix/store/b309vjvsxwijv4waals0ybrjgl1ndms5-nss-3.101.2",
+        "tools": "/nix/store/f2z4k4fln4camdnq0l4q130h0f4y78sj-nss-3.101.2-tools"
+      },
+      "system": "aarch64-linux",
+      "group": "gui",
+      "priority": 5
+    },
+    {
+      "attr_path": "nss",
+      "broken": false,
+      "derivation": "/nix/store/jsy96xlimwpqpcalam7v09gz2nx2n03v-nss-3.101.2.drv",
+      "description": "Set of libraries for development of security-enabled client and server applications",
+      "install_id": "nss",
+      "license": "MPL-2.0",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=a79cfe0ebd24952b580b1cf08cd906354996d547",
+      "name": "nss-3.101.2",
+      "pname": "nss",
+      "rev": "a79cfe0ebd24952b580b1cf08cd906354996d547",
+      "rev_count": 750629,
+      "rev_date": "2025-02-08T13:21:17Z",
+      "scrape_date": "2025-02-09T05:15:18Z",
+      "stabilities": [
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "3.101.2",
+      "outputs_to_install": [
+        "man",
+        "out"
+      ],
+      "outputs": {
+        "dev": "/nix/store/0p4wbaamb3k4bch2cshq6w74bg1djwgs-nss-3.101.2-dev",
+        "man": "/nix/store/crm5sfhjj35nc1wvd6zjd81y98ln0d1b-nss-3.101.2-man",
+        "out": "/nix/store/2spyycmzasgqvgs38v3qz8d68v92645n-nss-3.101.2",
+        "tools": "/nix/store/flzgsx0mr4x3ghl9718mn96x92h0qx86-nss-3.101.2-tools"
+      },
+      "system": "x86_64-darwin",
+      "group": "gui",
+      "priority": 5
+    },
+    {
+      "attr_path": "nss",
+      "broken": false,
+      "derivation": "/nix/store/ssnfpzglypvbpfr5n9qj315z6f23567k-nss-3.101.2.drv",
+      "description": "Set of libraries for development of security-enabled client and server applications",
+      "install_id": "nss",
+      "license": "MPL-2.0",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=a79cfe0ebd24952b580b1cf08cd906354996d547",
+      "name": "nss-3.101.2",
+      "pname": "nss",
+      "rev": "a79cfe0ebd24952b580b1cf08cd906354996d547",
+      "rev_count": 750629,
+      "rev_date": "2025-02-08T13:21:17Z",
+      "scrape_date": "2025-02-09T05:15:18Z",
+      "stabilities": [
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "3.101.2",
+      "outputs_to_install": [
+        "man",
+        "out"
+      ],
+      "outputs": {
+        "dev": "/nix/store/blijkpxvfyvqbg1i3lyj7xld2r6vnh5c-nss-3.101.2-dev",
+        "man": "/nix/store/zdwy25pnsfbd4n85i9hgyvsgzkc7q92d-nss-3.101.2-man",
+        "out": "/nix/store/rsw05vv0caclcb57d9jlzx2zbqhsppvf-nss-3.101.2",
+        "tools": "/nix/store/466bnrsz6mbfwdps4ala081fwhhd3qp1-nss-3.101.2-tools"
+      },
+      "system": "x86_64-linux",
+      "group": "gui",
+      "priority": 5
+    },
+    {
+      "attr_path": "fpm",
+      "broken": false,
+      "derivation": "/nix/store/kypfrkkjcp679iqgbrzgcqr8g9lv4dwq-fpm-1.13.0.drv",
+      "description": "Tool to build packages for multiple platforms with ease",
+      "install_id": "fpm",
+      "license": "MIT",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=91050ea1e57e50388fa87a3302ba12d188ef723a",
+      "name": "fpm-1.13.0",
+      "pname": "fpm",
+      "rev": "91050ea1e57e50388fa87a3302ba12d188ef723a",
+      "rev_count": 555097,
+      "rev_date": "2023-12-01T13:12:07Z",
+      "scrape_date": "2024-08-15T23:08:02Z",
+      "stabilities": [
+        "staging",
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "1.13.0",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "out": "/nix/store/in817fax1pjq7xbnk5hpfl2pjd7pra4g-fpm-1.13.0"
+      },
+      "system": "aarch64-darwin",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "fpm",
+      "broken": false,
+      "derivation": "/nix/store/xr2skqncjj9in4q3d3qx19lwvx41i7kl-fpm-1.13.0.drv",
+      "description": "Tool to build packages for multiple platforms with ease",
+      "install_id": "fpm",
+      "license": "MIT",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=91050ea1e57e50388fa87a3302ba12d188ef723a",
+      "name": "fpm-1.13.0",
+      "pname": "fpm",
+      "rev": "91050ea1e57e50388fa87a3302ba12d188ef723a",
+      "rev_count": 555097,
+      "rev_date": "2023-12-01T13:12:07Z",
+      "scrape_date": "2024-08-15T23:08:02Z",
+      "stabilities": [
+        "staging",
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "1.13.0",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "out": "/nix/store/0s9arj06kf9c7p2y0lxdvvx388mvwnam-fpm-1.13.0"
+      },
+      "system": "aarch64-linux",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "fpm",
+      "broken": false,
+      "derivation": "/nix/store/04f1mvzv30fjkng2dbjrd1bis4clxdp7-fpm-1.13.0.drv",
+      "description": "Tool to build packages for multiple platforms with ease",
+      "install_id": "fpm",
+      "license": "MIT",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=91050ea1e57e50388fa87a3302ba12d188ef723a",
+      "name": "fpm-1.13.0",
+      "pname": "fpm",
+      "rev": "91050ea1e57e50388fa87a3302ba12d188ef723a",
+      "rev_count": 555097,
+      "rev_date": "2023-12-01T13:12:07Z",
+      "scrape_date": "2024-08-15T23:08:02Z",
+      "stabilities": [
+        "staging",
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "1.13.0",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "out": "/nix/store/95kdsh4m1isyk4ammz0954xh339gq7yx-fpm-1.13.0"
+      },
+      "system": "x86_64-darwin",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "fpm",
+      "broken": false,
+      "derivation": "/nix/store/k2gmig1pipf6309711snnfl2q6733i60-fpm-1.13.0.drv",
+      "description": "Tool to build packages for multiple platforms with ease",
+      "install_id": "fpm",
+      "license": "MIT",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=91050ea1e57e50388fa87a3302ba12d188ef723a",
+      "name": "fpm-1.13.0",
+      "pname": "fpm",
+      "rev": "91050ea1e57e50388fa87a3302ba12d188ef723a",
+      "rev_count": 555097,
+      "rev_date": "2023-12-01T13:12:07Z",
+      "scrape_date": "2024-08-15T23:08:02Z",
+      "stabilities": [
+        "staging",
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "1.13.0",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "out": "/nix/store/c5jz9xj4admhpsyfinrxphc5vspik3pm-fpm-1.13.0"
+      },
+      "system": "x86_64-linux",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "nodejs",
+      "broken": false,
+      "derivation": "/nix/store/b2sh3fx6g40fs75g9di9vz4m0dpdvj4h-nodejs-18.18.2.drv",
+      "description": "Event-driven I/O framework for the V8 JavaScript engine",
+      "install_id": "nodejs",
+      "license": "MIT",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=91050ea1e57e50388fa87a3302ba12d188ef723a",
+      "name": "nodejs-18.18.2",
+      "pname": "nodejs",
+      "rev": "91050ea1e57e50388fa87a3302ba12d188ef723a",
+      "rev_count": 555097,
+      "rev_date": "2023-12-01T13:12:07Z",
+      "scrape_date": "2024-08-15T23:08:02Z",
+      "stabilities": [
+        "staging",
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "18.18.2",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "libv8": "/nix/store/dv3m2x2pndwx0biwl36swkwcsmwwv8zv-nodejs-18.18.2-libv8",
+        "out": "/nix/store/2gs1bzkbap7r4nr7vvyi575mdrj26nby-nodejs-18.18.2"
+      },
+      "system": "aarch64-darwin",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "nodejs",
+      "broken": false,
+      "derivation": "/nix/store/lv80xzb79xnfm3mg863cvfcd0jyn7c4w-nodejs-18.18.2.drv",
+      "description": "Event-driven I/O framework for the V8 JavaScript engine",
+      "install_id": "nodejs",
+      "license": "MIT",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=91050ea1e57e50388fa87a3302ba12d188ef723a",
+      "name": "nodejs-18.18.2",
+      "pname": "nodejs",
+      "rev": "91050ea1e57e50388fa87a3302ba12d188ef723a",
+      "rev_count": 555097,
+      "rev_date": "2023-12-01T13:12:07Z",
+      "scrape_date": "2024-08-15T23:08:02Z",
+      "stabilities": [
+        "staging",
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "18.18.2",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "libv8": "/nix/store/w6w2ghy0blslamavqc59c8w1b591iyzb-nodejs-18.18.2-libv8",
+        "out": "/nix/store/f8qcasnw2s9yag4xk3lzg4m3ffkqdg2z-nodejs-18.18.2"
+      },
+      "system": "aarch64-linux",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "nodejs",
+      "broken": false,
+      "derivation": "/nix/store/qpp742m8a8jis47glkq2i07l5wx07sf9-nodejs-18.18.2.drv",
+      "description": "Event-driven I/O framework for the V8 JavaScript engine",
+      "install_id": "nodejs",
+      "license": "MIT",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=91050ea1e57e50388fa87a3302ba12d188ef723a",
+      "name": "nodejs-18.18.2",
+      "pname": "nodejs",
+      "rev": "91050ea1e57e50388fa87a3302ba12d188ef723a",
+      "rev_count": 555097,
+      "rev_date": "2023-12-01T13:12:07Z",
+      "scrape_date": "2024-08-15T23:08:02Z",
+      "stabilities": [
+        "staging",
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "18.18.2",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "libv8": "/nix/store/9k10mzcz8z9m3amdilzqipbv777ys0p8-nodejs-18.18.2-libv8",
+        "out": "/nix/store/3h1c5f3lc5dbbymjv68d3sp66hkyrg4j-nodejs-18.18.2"
+      },
+      "system": "x86_64-darwin",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "nodejs",
+      "broken": false,
+      "derivation": "/nix/store/n4k6jdxal9annipfx09h578n64xavkzy-nodejs-18.18.2.drv",
+      "description": "Event-driven I/O framework for the V8 JavaScript engine",
+      "install_id": "nodejs",
+      "license": "MIT",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=91050ea1e57e50388fa87a3302ba12d188ef723a",
+      "name": "nodejs-18.18.2",
+      "pname": "nodejs",
+      "rev": "91050ea1e57e50388fa87a3302ba12d188ef723a",
+      "rev_count": 555097,
+      "rev_date": "2023-12-01T13:12:07Z",
+      "scrape_date": "2024-08-15T23:08:02Z",
+      "stabilities": [
+        "staging",
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "18.18.2",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "libv8": "/nix/store/d0iajflf9crbz43fd07q9vszyzr979qq-nodejs-18.18.2-libv8",
+        "out": "/nix/store/4bgg8j8275adawqbc5rkm4fv48dgg2i3-nodejs-18.18.2"
+      },
+      "system": "x86_64-linux",
+      "group": "toplevel",
+      "priority": 5
+    }
+  ]
+}

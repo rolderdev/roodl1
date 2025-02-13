@@ -1,12 +1,16 @@
 # Changelog
 
+## 2025-01-13 v1.2.0
+
+[Новость](https://docs.rolder.app/#/newspost/agyjxm06oc09hpqd3gsk)
+
 ## 2024-09-26 v1.1.0
 
 [Новость](https://docs.rolder.app/#/newspost/mv6-KZIBFk35karOoyDD)
 
 ## 2024-07-18 v1.0.0
 
-Больше нет планов что-то менять в Roodl, поэтому версия 1.0.0 
+Больше нет планов что-то менять в Roodl, поэтому версия 1.0.0
 
 - Установщики собраные через Github Actions, как это делал Noodl. Теперь есть все версии - Linux, Mac (Intel и Silicon) и Windows.
 - Наведен порядок в выборе нод - более четкая группировка, добавлены последние ноды RK.

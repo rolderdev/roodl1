@@ -1,0 +1,135 @@
+## Flox Environment Manifest -----------------------------------------
+##
+##   _Everything_ you need to know about the _manifest_ is here:
+##
+##               https://flox.dev/docs/concepts/manifest
+##
+## -------------------------------------------------------------------
+# Flox manifest version managed by Flox CLI
+version = 1
+
+
+## Install Packages --------------------------------------------------
+##  $ flox install gum  <- puts a package in [install] section below
+##  $ flox search gum   <- search for a package
+##  $ flox show gum     <- show all versions of a package
+## -------------------------------------------------------------------
+[install]
+nodejs.pkg-path = "nodejs"
+nodejs.version = "18.18.2"
+fpm.pkg-path = "fpm"
+# dev dependencies
+glib.pkg-path = "glib"
+glib.pkg-group = "gui"
+nss.pkg-path = "nss"
+nss.pkg-group = "gui"
+dbus.pkg-path = "dbus"
+dbus.pkg-group = "gui"
+atk.pkg-path = "atk"
+atk.pkg-group = "gui"
+cups.pkg-path = "cups"
+cups.pkg-group = "gui"
+libdrm.pkg-path = "libdrm"
+libdrm.systems = ["aarch64-linux", "x86_64-linux"]
+libdrm.pkg-group = "gui"
+libgbm.pkg-path = "libgbm"
+libgbm.systems = ["aarch64-linux", "x86_64-linux"]
+libgbm.pkg-group = "gui"
+gtk3.pkg-path = "gtk3"
+gtk3.pkg-group = "gui"
+libxkbcommon.pkg-path = "libxkbcommon"
+libxkbcommon.pkg-group = "gui"
+alsa-lib.pkg-path = "alsa-lib"
+alsa-lib.systems = ["aarch64-linux", "x86_64-linux"]
+alsa-lib.pkg-group = "audio"
+
+# dpkg.pkg-path = "dpkg"
+# libnotify.pkg-path = "libnotify"
+
+# libxtst.pkg-path = "xorg.libXtst"                   # это аналог libxtst6
+# libxtst.systems = ["aarch64-linux", "x86_64-linux"]
+# libxtst.pkg-group = "x11"
+
+# xdg-utils.pkg-path = "xdg-utils"
+# xdg-utils.pkg-group = "tools"
+
+# at-spi2-core.pkg-path = "at-spi2-core"   # это аналог libatspi2.0-0
+# at-spi2-core.pkg-group = "accessibility"
+
+# libuuid.pkg-path = "libuuid"                        # это аналог libuuid1
+# libuuid.systems = ["aarch64-linux", "x86_64-linux"]
+# libuuid.pkg-group = "system"
+
+# libsecret.pkg-path = "libsecret" # это аналог libsecret-1-0
+# libsecret.pkg-group = "security"
+
+# libappindicator.pkg-path = "libappindicator"                # это аналог libappindicator3-1
+# libappindicator.systems = ["aarch64-linux", "x86_64-linux"]
+# libappindicator.pkg-group = "gui"
+
+# libxscrnsaver.pkg-path = "xorg.libXScrnSaver"             # это аналог libxss1
+# libxscrnsaver.systems = ["aarch64-linux", "x86_64-linux"]
+# libxscrnsaver.pkg-group = "x11"
+# gcc.pkg-path = "gcc"
+# gnumake.pkg-path = "gnumake"
+# binutils.pkg-path = "binutils"
+# patchelf.pkg-path = "patchelf"
+# fakeroot.pkg-path = "fakeroot"
+# gnutar.pkg-path = "gnutar"
+# zlib.pkg-path = "zlib"
+# xz.pkg-path = "xz"
+# zstd.pkg-path = "zstd"
+
+## Environment Variables ---------------------------------------------
+##  ... available for use in the activated environment
+##      as well as [hook], [profile] scripts and [services] below.
+## -------------------------------------------------------------------
+[vars]
+# INTRO_MESSAGE = "It's gettin' Flox in here"
+
+
+## Activation Hook ---------------------------------------------------
+##  ... run by _bash_ shell when you run 'flox activate'.
+## -------------------------------------------------------------------
+[hook]
+# on-activate = '''
+#   # -> Set variables, create files and directories
+#   # -> Perform initialization steps, e.g. create a python venv
+#   # -> Useful environment variables:
+#   #      - FLOX_ENV_PROJECT=/home/user/example
+#   #      - FLOX_ENV=/home/user/example/.flox/run
+#   #      - FLOX_ENV_CACHE=/home/user/example/.flox/cache
+# '''
+
+
+## Profile script ----------------------------------------------------
+## ... sourced by _your shell_ when you run 'flox activate'.
+## -------------------------------------------------------------------
+[profile]
+# common = '''
+#   gum style \
+#   --foreground 212 --border-foreground 212 --border double \
+#   --align center --width 50 --margin "1 2" --padding "2 4" \
+#     $INTRO_MESSAGE
+# '''
+## Shell specific profiles go here:
+# bash = ...
+# zsh  = ...
+# fish = ...
+
+
+## Services ----------------------------------------------------------
+##  $ flox services start             <- Starts all services
+##  $ flox services status            <- Status of running services
+##  $ flox activate --start-services  <- Activates & starts all
+## -------------------------------------------------------------------
+[services]
+# myservice.command = "python3 -m http.server"
+
+
+## Other Environment Options -----------------------------------------
+[options]
+# Systems that environment is compatible with
+systems = ["aarch64-darwin", "aarch64-linux", "x86_64-darwin", "x86_64-linux"]
+# Uncomment to disable CUDA detection.
+# cuda-detection = false
